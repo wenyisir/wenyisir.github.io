@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2022-01-08T12:50:58.948Z</updated>
+  <updated>2022-01-09T09:09:43.237Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -17,17 +17,96 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Git 的基本使用方法</title>
+    <link href="http://wenyisir.github.io/2022/01/09/Git/"/>
+    <id>http://wenyisir.github.io/2022/01/09/Git/</id>
+    <published>2022-01-09T09:05:04.000Z</published>
+    <updated>2022-01-09T09:09:43.237Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-Git-结构&quot;&gt;&lt;a href=&quot;#1-Git-结构&quot; class=&quot;headerlink&quot; title=&quot;1. Git 结构&quot;&gt;&lt;/a&gt;1. Git 结构&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;本地库：存放历史版本&lt;/li&gt;
+&lt;li&gt;暂存区：用于临时存储&lt;/li&gt;
+&lt;li&gt;工作区：写代码的地方&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;工作区 -&amp;gt; git add -&amp;gt; 暂存区 -&amp;gt; 本地库&lt;/p&gt;
+&lt;h3 id=&quot;2-Git-命令行操作&quot;&gt;&lt;a href=&quot;#2-Git-命令行操作&quot; class=&quot;headerlink&quot; title=&quot;2. Git 命令行操作&quot;&gt;&lt;/a&gt;2. Git 命令行操作&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;初始本地化库&lt;/p&gt;
+&lt;p&gt;命令：git add&lt;/p&gt;
+&lt;p&gt;效果：生成 .git 文件。其中存放本地库相关的子目录和文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置签名&lt;/p&gt;
+&lt;p&gt;形式：用户名与Email地址&lt;/p&gt;
+&lt;p&gt;作用：区分不同的开发人员的身份&lt;/p&gt;
+&lt;p&gt;命令：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;项目级别/仓库级别：仅在当前本地库范围内生效    &lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config user.name wenyi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config user.email 465815354@qq.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;信息保存位置：./.git/config&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;系统用户级别&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.name wenyi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.email 465815354@qq.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;信息保存位置：~/.gitconfig&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基本操作&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;状态查看&lt;/p&gt;
+&lt;p&gt;git status：查看工作区，暂存区状态&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加&lt;/p&gt;
+&lt;p&gt;git add [file name] :将工作区的新建/修改添加到暂存区&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;提交&lt;/p&gt;
+&lt;p&gt;git commit -m “commmit message” [file name]&lt;/p&gt;
+&lt;p&gt;将暂存区的内容提交到本地库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看历史记录&lt;/p&gt;
+&lt;p&gt;git log :多屏显示控制方式(linux下：空格翻页，b向上翻页，q退出)&lt;/p&gt;
+&lt;p&gt;git log —pretty=oneline&lt;/p&gt;
+&lt;p&gt;git log —oneline&lt;/p&gt;
+&lt;p&gt;git reflog: 长用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;前进后退&lt;/p&gt;
+&lt;p&gt;基于索引值的操作[推荐]&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git reset --hard [局部索引值]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;使用^符号：只能后退&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git reset --hard HEAD^&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;使用~符号：只能后退&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git reset --hard HEAD~n&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;reset 命令三个参数对比&lt;/p&gt;
+&lt;p&gt;—soft参数：仅仅在本地库移动HEAD指针&lt;/p&gt;
+&lt;p&gt;—mixed参数：在本地库移动HEAD指针并且重置暂存区&lt;/p&gt;
+&lt;p&gt;—hard参数：在本地库移动HEAD指针，重置暂存区，重置工作区&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;比较文件差异&lt;/p&gt;
+&lt;p&gt;git diff [文件名]：将工作区中的文件和暂存区进行比较&lt;/p&gt;
+&lt;p&gt;git diff [本地库中历史版本] [文件名]：将工作区中的文件和历史版本比较&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="Git" scheme="http://wenyisir.github.io/categories/Git/"/>
+    
+    
+    <category term="Git" scheme="http://wenyisir.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>模板</title>
     <link href="http://wenyisir.github.io/2022/01/08/%E6%A8%A1%E6%9D%BF/"/>
     <id>http://wenyisir.github.io/2022/01/08/%E6%A8%A1%E6%9D%BF/</id>
     <published>2022-01-08T12:48:58.000Z</published>
-    <updated>2022-01-08T12:50:58.948Z</updated>
+    <updated>2022-01-09T08:30:04.108Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;一-数据结构&quot;&gt;&lt;a href=&quot;#一-数据结构&quot; class=&quot;headerlink&quot; title=&quot;一. 数据结构&quot;&gt;&lt;/a&gt;一. 数据结构&lt;/h2&gt;&lt;h4 id=&quot;1-RMQ&quot;&gt;&lt;a href=&quot;#1-RMQ&quot; class=&quot;headerlink&quot; title=&quot;1. RMQ&quot;&gt;&lt;/a&gt;1. RMQ&lt;/h4&gt;&lt;h5 id=&quot;1-1-一维&quot;&gt;&lt;a href=&quot;#1-1-一维&quot; class=&quot;headerlink&quot; title=&quot;1.1 一维&quot;&gt;&lt;/a&gt;1.1 一维&lt;/h5&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; N = &lt;span class=&quot;number&quot;&gt;5e5&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; f[N][&lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; lg2[N];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Query&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; l, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; r)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; k = lg2[r - l + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;max&lt;/span&gt;(f[l][k], f[r - (&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;lt;&amp;lt; k) + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;][k]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    lg2[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;; i &amp;lt; N; ++i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        lg2[i] = lg2[i &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n, m;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;%d&amp;quot;&lt;/span&gt;, &amp;amp;n);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt;= n; ++i) &lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;%d&amp;quot;&lt;/span&gt;, &amp;amp;f[i][&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; j &amp;lt;= &lt;span class=&quot;number&quot;&gt;21&lt;/span&gt;; ++j)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i + (&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;lt;&amp;lt; j) - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;lt;= n; ++i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            f[i][j] = &lt;span class=&quot;built_in&quot;&gt;max&lt;/span&gt;(f[i][j - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;], f[i + (&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;lt;&amp;lt; (j - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;))][j - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;%d&amp;quot;&lt;/span&gt;, &amp;amp;m);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt;= m; ++i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; l, r;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;%d%d&amp;quot;&lt;/span&gt;, &amp;amp;l, &amp;amp;r);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;%d\n&amp;quot;&lt;/span&gt;,&lt;span class=&quot;built_in&quot;&gt;Query&lt;/span&gt;(l,r));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
-
 &lt;h5 id=&quot;1-2-二维&quot;&gt;&lt;a href=&quot;#1-2-二维&quot; class=&quot;headerlink&quot; title=&quot;1.2 二维&quot;&gt;&lt;/a&gt;1.2 二维&lt;/h5&gt;</summary>
     
     

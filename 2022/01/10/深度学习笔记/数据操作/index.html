@@ -28,7 +28,7 @@
 <meta property="og:description" content="1. 张量创建使用arrange创建一个行向量x。这个行向量包含0开始的前12个整数，默认为浮点数 1x &#x3D; torch.arange(12) 可以通过张量的shape属性来访问形状 1x.shape">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-10T15:30:41.000Z">
-<meta property="article:modified_time" content="2022-01-10T15:33:14.884Z">
+<meta property="article:modified_time" content="2022-02-17T10:47:12.143Z">
 <meta property="article:author" content="wenyi">
 <meta name="twitter:card" content="summary">
 
@@ -189,17 +189,23 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-01-10 23:30:41 / 修改时间：23:33:14" itemprop="dateCreated datePublished" datetime="2022-01-10T23:30:41+08:00">2022-01-10</time>
+              <time title="创建时间：2022-01-10 23:30:41" itemprop="dateCreated datePublished" datetime="2022-01-10T23:30:41+08:00">2022-01-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-17 18:47:12" itemprop="dateModified" datetime="2022-02-17T18:47:12+08:00">2022-02-17</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a>
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">深度学习笔记</span></a>
                 </span>
             </span>
 
@@ -222,11 +228,10 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = x.reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(X)</span><br></pre></td></tr></table></figure>
 <p>运行结果为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tensor([[ 0,  1,  2,  3],</span><br><span class="line">        [ 4,  5,  6,  7],</span><br><span class="line">        [ 8,  9, 10, 11]])</span><br></pre></td></tr></table></figure>
-<p>我们可以通过-1来调用自动计算出维度的功能，使用x.reshape(-1,4)或者x.reshape(3,-1)来代替。</p>
-<p>创建全0/1/随机数矩阵</p>
+<p>我们可以通过-1来调用自动计算出维度的功能，使用x.reshape(-1,4)或者x.reshape(3,-1)来代替。<br>创建全0/1/随机数矩阵</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#形状为(2,3,4)，全0</span></span><br><span class="line">torch.zeros((<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line"><span class="comment">#形状为(2,3,4)，全1</span></span><br><span class="line">torch.ones((<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line"><span class="comment">#形状为(3,4)，均值为0、标准差为1的标准高斯分布（正态分布）中随机采样。</span></span><br><span class="line">torch.randn(<span class="number">3</span>,<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
 <p>通过赋值python列表给张量赋值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.tensor([[<span class="number">2</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>], [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]])</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.<span class="built_in">tensor</span>([[<span class="number">2</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>], [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]])</span><br></pre></td></tr></table></figure>
 <h3 id="2-张量运算"><a href="#2-张量运算" class="headerlink" title="2. 张量运算"></a>2. 张量运算</h3><p>加减乘除求幂</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x = torch.tensor([<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>])</span><br><span class="line">y = torch.tensor([<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>])</span><br><span class="line">x + y, x - y, x * y, x / y, x ** y</span><br><span class="line"><span class="comment">#运行结果</span></span><br><span class="line">tensor([ <span class="number">3</span>,  <span class="number">4</span>,  <span class="number">6</span>, <span class="number">10</span>])</span><br><span class="line">tensor([-<span class="number">1</span>,  <span class="number">0</span>,  <span class="number">2</span>,  <span class="number">6</span>])</span><br><span class="line">tensor([ <span class="number">2</span>,  <span class="number">4</span>,  <span class="number">8</span>, <span class="number">16</span>])</span><br><span class="line">tensor([<span class="number">0.5000</span>, <span class="number">1.0000</span>, <span class="number">2.0000</span>, <span class="number">4.0000</span>])</span><br><span class="line">tensor([ <span class="number">1</span>,  <span class="number">4</span>, <span class="number">16</span>, <span class="number">64</span>])</span><br></pre></td></tr></table></figure>
 <p>以e为底的指数运算</p>
@@ -243,8 +248,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a + b</span><br><span class="line"><span class="comment">#运行结果</span></span><br><span class="line">tensor([[<span class="number">0</span>, <span class="number">1</span>],</span><br><span class="line">        [<span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">        [<span class="number">2</span>, <span class="number">3</span>]])</span><br></pre></td></tr></table></figure>
 <h3 id="4-索引和切片"><a href="#4-索引和切片" class="headerlink" title="4.索引和切片"></a>4.索引和切片</h3><p>跟python中的数组类似。第一个元素的索引是0，最后一个元素索引是-1； 可以指定范围以包含第一个元素和最后一个之前的元素。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X[-<span class="number">1</span>]    <span class="comment">#选取最后一个元素</span></span><br><span class="line">X[<span class="number">1</span>:<span class="number">3</span>]   <span class="comment">#选取第二个和第三个元素</span></span><br><span class="line">X[<span class="number">1</span>, <span class="number">2</span>] = <span class="number">9</span>  <span class="comment">#将第二行第三个写成9</span></span><br><span class="line">X[<span class="number">0</span>:<span class="number">2</span>, :]   <span class="comment">#访问第一第二行，所有列</span></span><br></pre></td></tr></table></figure>
-<h3 id="5-节省内存"><a href="#5-节省内存" class="headerlink" title="5.节省内存"></a>5.节省内存</h3><p>运行一些操作可能会导致为新结果分配内存。 例如，如果我们用<code>Y = X + Y</code>，我们将取消引用<code>Y</code>指向的张量，而是指向新分配的内存处的张量。</p>
-<p>如果在后续计算中没有重复使用<code>X</code>， 我们也可以使用<code>X[:] = X + Y</code>或<code>X += Y</code>来减少操作的内存开销。</p>
+<h3 id="5-节省内存"><a href="#5-节省内存" class="headerlink" title="5.节省内存"></a>5.节省内存</h3><p>运行一些操作可能会导致为新结果分配内存。 例如，如果我们用<code>Y = X + Y</code>，我们将取消引用<code>Y</code>指向的张量，而是指向新分配的内存处的张量。<br>如果在后续计算中没有重复使用<code>X</code>， 我们也可以使用<code>X[:] = X + Y</code>或<code>X += Y</code>来减少操作的内存开销。</p>
 <h3 id="6-转换为其他Python对象"><a href="#6-转换为其他Python对象" class="headerlink" title="6.转换为其他Python对象"></a>6.转换为其他Python对象</h3><p>与numpy数组互相转换</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A = X.numpy()</span><br><span class="line">B = torch.tensor(A)</span><br></pre></td></tr></table></figure>
 
@@ -315,8 +319,8 @@
       <i class="fa fa-chevron-left"></i> Git 的基本使用方法
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/02/17/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="next" title="可持久化数据结构">
-      可持久化数据结构 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linear_regression/" rel="next" title="线性回归">
+      线性回归 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -392,14 +396,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">

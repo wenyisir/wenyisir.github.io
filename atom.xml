@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2022-03-11T06:42:12.167Z</updated>
+  <updated>2022-04-24T12:52:46.473Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>weiji</title>
+    <link href="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/"/>
+    <id>http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/</id>
+    <published>2022-04-24T12:45:27.000Z</published>
+    <updated>2022-04-24T12:52:46.473Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;串行通信与可编程接口8251A&quot;&gt;&lt;a href=&quot;#串行通信与可编程接口8251A&quot; class=&quot;headerlink&quot; title=&quot;串行通信与可编程接口8251A&quot;&gt;&lt;/a&gt;串行通信与可编程接口8251A&lt;/h1&gt;&lt;h2 id=&quot;一-概念&quot;&gt;&lt;a href=&quot;#一-概念&quot; class=&quot;headerlink&quot; title=&quot;一. 概念&quot;&gt;&lt;/a&gt;一. 概念&lt;/h2&gt;&lt;h3 id=&quot;串行通信的概念&quot;&gt;&lt;a href=&quot;#串行通信的概念&quot; class=&quot;headerlink&quot; title=&quot;串行通信的概念&quot;&gt;&lt;/a&gt;串行通信的概念&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;并行通信&lt;/strong&gt;：并行传输，以字节或者字为单位与I/O设备或者被控对象进行数据交换&lt;/li&gt;
+&lt;li&gt;特点：传输速度快；硬件开销大；适合近距离传输&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;串行通信&lt;/strong&gt;：一位一位的进行数据传输&lt;/li&gt;
+&lt;li&gt;特点：传输线少，成本低，适合远距离传送，缺点是速度慢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;串行数据传送的方式&quot;&gt;&lt;a href=&quot;#串行数据传送的方式&quot; class=&quot;headerlink&quot; title=&quot;串行数据传送的方式&quot;&gt;&lt;/a&gt;串行数据传送的方式&lt;/h4&gt;</summary>
+    
+    
+    
+    <category term="微积系统与接口" scheme="http://wenyisir.github.io/categories/%E5%BE%AE%E7%A7%AF%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>线性回归</title>

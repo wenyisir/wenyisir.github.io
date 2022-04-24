@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wenyisir.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="串行通信与可编程接口8251A一. 概念串行通信的概念 并行通信：并行传输，以字节或者字为单位与I&#x2F;O设备或者被控对象进行数据交换 特点：传输速度快；硬件开销大；适合近距离传输 串行通信：一位一位的进行数据传输 特点：传输线少，成本低，适合远距离传送，缺点是速度慢  串行数据传送的方式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="weiji">
+<meta property="og:url" content="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/index.html">
+<meta property="og:site_name" content="文溢の博客">
+<meta property="og:description" content="串行通信与可编程接口8251A一. 概念串行通信的概念 并行通信：并行传输，以字节或者字为单位与I&#x2F;O设备或者被控对象进行数据交换 特点：传输速度快；硬件开销大；适合近距离传输 串行通信：一位一位的进行数据传输 特点：传输线少，成本低，适合远距离传送，缺点是速度慢  串行数据传送的方式">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424170854895.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424172823910.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424173938169.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424174838204.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424180315366.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424193418865.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424193532651.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424195735073.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424200053808.png">
+<meta property="article:published_time" content="2022-04-24T12:45:27.000Z">
+<meta property="article:modified_time" content="2022-04-24T12:52:46.473Z">
+<meta property="article:author" content="wenyi">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424170854895.png">
+
+<link rel="canonical" href="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>weiji | 文溢の博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="文溢の博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">文溢の博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">study is a lifelong journey!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="wenyi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="文溢の博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          weiji
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-24 20:45:27 / 修改时间：20:52:46" itemprop="dateCreated datePublished" datetime="2022-04-24T20:45:27+08:00">2022-04-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BE%AE%E7%A7%AF%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/" itemprop="url" rel="index"><span itemprop="name">微积系统与接口</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="串行通信与可编程接口8251A"><a href="#串行通信与可编程接口8251A" class="headerlink" title="串行通信与可编程接口8251A"></a>串行通信与可编程接口8251A</h1><h2 id="一-概念"><a href="#一-概念" class="headerlink" title="一. 概念"></a>一. 概念</h2><h3 id="串行通信的概念"><a href="#串行通信的概念" class="headerlink" title="串行通信的概念"></a>串行通信的概念</h3><ul>
+<li><strong>并行通信</strong>：并行传输，以字节或者字为单位与I/O设备或者被控对象进行数据交换</li>
+<li>特点：传输速度快；硬件开销大；适合近距离传输</li>
+<li><strong>串行通信</strong>：一位一位的进行数据传输</li>
+<li>特点：传输线少，成本低，适合远距离传送，缺点是速度慢</li>
+</ul>
+<h4 id="串行数据传送的方式"><a href="#串行数据传送的方式" class="headerlink" title="串行数据传送的方式"></a>串行数据传送的方式</h4><p><strong>三种：单工通信，半双工通信和全双工通信方式。</strong></p>
+<ol>
+<li>单工通信方式<br>传输的线路用一根线，通信的数据只允许按照一个固定的方向传送。</li>
+<li>半双工通信方式<br>传输的过程中依然用一根线连接，在某个时刻，只能进行发送或者只能进行接收，也就是说不能同时进行发送和接受。</li>
+<li>全双工通信方式<br>相互通信的双方，都可以是接收器也都可以是发送器。分别用两根独立的传输线（一般是双绞线）来连接发送信号和接收信号，这样发送方和接收方可以同时工作。</li>
+</ol>
+<h4 id="串行传送的两种基本工作方式"><a href="#串行传送的两种基本工作方式" class="headerlink" title="串行传送的两种基本工作方式"></a>串行传送的两种基本工作方式</h4><ol>
+<li><p>异步通信方式<br>以字符为单位进行传输。字符之间没有固定的时间间隔要求，而每个字符中的各位则以固定的时间传送。<strong>同步的方法</strong>：在字符格式中设置起始位和停止位。在一个有效字符正式发送前，先发送送一个起始位，再字符结束时再发送一个停止位，起始位到停止位构成一<strong>帧</strong>。<br><img src="/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424170854895.png" alt="image-20220424170854895"><br>空闲位：传送字符之间的逻辑1电平，表示没有进行传送。</p>
+</li>
+<li><p>同步通信方式<br>由一个统一的时钟控制发送方和接收方，若干字符组成一个信息组，字符要一个接着一个传送。没有字符时，也要发送专用的’空闲‘字符或者是同步字符，因为同步传输要求连续传送，字符中间不允许有间隔。</p>
+<p>同步传输的特征是：在每组信息的开始（常称为帧头）要加上1-2个同步字符，后面跟着8位字符数据。以一串字符为一个传送单位，字符间不加标识位，在一串字符开始用同步字符表示，硬件要求高，通信双发需要严格同步。</p>
+</li>
+</ol>
+<h4 id="串行传送速率"><a href="#串行传送速率" class="headerlink" title="串行传送速率"></a>串行传送速率</h4><ul>
+<li><strong>波特率：</strong>串行传输中的数据传输速度的衡量单位，用每秒传输数据的位数来表示。</li>
+<li>国际上规定的一个标准的波特率系列是：110，300，600，1200，1800，2400，4800，9600，19200.</li>
+<li>异步通信允许发送发和接收方的时钟误差或波特率误差在4%~5%。</li>
+</ul>
+<h4 id="发送时钟和接收时钟"><a href="#发送时钟和接收时钟" class="headerlink" title="发送时钟和接收时钟"></a>发送时钟和接收时钟</h4><ul>
+<li><p>二进制数据序列称为比特组，由发送器发到传输线上，再由接收器从传输线上接收。</p>
+</li>
+<li><p>二进制数据序列在传输线上是以数字信号形式出现，即用 高电平表示二进制数1，低电平表示二进制数0。</p>
+</li>
+<li><p>每一位持续的时间是固定的，在发送时以发送时钟作为数据位的划分界限，在接收时以接收时钟作为数据为检测。</p>
+<p><img src="/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424172823910.png" alt="image-20220424172823910"></p>
+</li>
+</ul>
+<h4 id="信号的调制与解调"><a href="#信号的调制与解调" class="headerlink" title="信号的调制与解调"></a>信号的调制与解调</h4><p>计算机对数字信号的通信，要求传输线的频带很宽，但在实际的长距离传输中，若利用电话线来传输，电话线的频带一般都比较窄。为保证信息传输的正确，要采用调制解调器(modem)来实现远距离的信息传输。</p>
+<p>调制解调器，顾名思义主要是完成调制和解调的功能。经过调制器(modulator)可把数字信号转换为模拟信号，经过解调器(demodulator)把模拟信号转换为数字信号。</p>
+<h4 id="串行通信接口RS-232C标准"><a href="#串行通信接口RS-232C标准" class="headerlink" title="串行通信接口RS-232C标准"></a>串行通信接口RS-232C标准</h4><p>美国电子工业协会EIA制定的通用标准串行接口：</p>
+<ul>
+<li>设计目的是用于连接调制解调器，现是最常用的串行通信接口之一，是PC机的标准配置。</li>
+<li>是数据终端设备DTE（例如计算机）与数据通信设备DCE（例如调制解调器）的标准接口。</li>
+<li>可实现远距离通信，也可近距离连接两台微机</li>
+<li>属于网络层次结构中的最底层：物理层。</li>
+</ul>
+<p>RS-232C是一种标准接口，D型插座，采用25芯引脚或9芯引脚的连接器，如下图所示：<img src="/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424173938169.png" alt="image-20220424173938169">            </p>
+<p><strong>主要引脚定义：</strong></p>
+<ul>
+<li>TxD（2）：发送数据，串行数据的发送端。</li>
+<li>RxD（3）：接受数据，串行数据的接收端。</li>
+<li>RTS（4）：发送请求，当数据终端设备准备好送出数据时，就发出有效的RTS信号，用于通知数据通信设备准 备接收数据。</li>
+<li>CTS（5）：清除发送（允许发送），当数据通信设备已准备好接收数据终端设备的传送数据时，发出CTS有效信号来响应RTS信号。</li>
+</ul>
+<p>​    <strong>RTS和CTS信号逻辑0为有效状态，是数据终端设备与数 据通信设备间一对用于数据发送的联络信号。</strong></p>
+<ul>
+<li><p>DTR（20）：数据终端准备好，通常当数据终端设备一加电，该信号就有效，表明数据终端设备准备就绪。</p>
+</li>
+<li><p>DSR（6）：数据装置准备好，通常表示数据通信设备（即数据装置）已接通电源连到通信线路上，并处在数据传输方式。</p>
+</li>
+</ul>
+<p>​    <strong>DTR和DSR信号逻辑0为有效状态，可用做数据终端设备与数据通信设备间的联络信号，例如应答数据接收</strong></p>
+<ul>
+<li>GND（7）：信号地，为所有的信号提供一个公共的参考电平。 </li>
+<li>DCD（8）：载波检测，当本地调制解调器接收到来自对方的载波信号时，该引脚向数据终端设备提供有效信号。</li>
+<li>RI（22）：振铃指示，当调制解调器接收到对方的拨号信号期间，该引脚信号作为电话铃响的指示、保持有效。</li>
+</ul>
+<p><img src="/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424174838204.png" alt="image-20220424174838204"></p>
+<h2 id="可编程串行接口8251A"><a href="#可编程串行接口8251A" class="headerlink" title="可编程串行接口8251A"></a>可编程串行接口8251A</h2><p>8251A是可编程的串行通信接口芯片，是Intel公司生产的一种通用<strong>同步/异步数据收发器</strong>，它的性能如下：</p>
+<ul>
+<li><strong>可工作的同步方式，也可以工作在异步方式</strong>。同步方式下波特率为0~64000波特，异步方式下波特率为0-19200波特。</li>
+<li>在同步方式时，每个字符可定义为5、6、7或8位。两种方法实现同步，由内部自动检测同步字符或由外部给出同步信号。允许同步方式下增加奇/偶校验位进行校验。</li>
+<li>在异步方式下，每个字符可定义为5、6、7或8位，用1位作奇偶校验。时钟速率可用软件定义为波特率的1、16或64倍。另外，8251A在异步方式下能自动为每个被输出的数据增加1个起始位，并能根据软件编程为每个输出数据设置1位、1.5位或2位停止位。</li>
+<li><strong>能进行出错检测。</strong>带有奇偶、溢出和帧错误等检测电路，用户可通过输入状态寄存器的内容进行查询。</li>
+</ul>
+<p>8251A的内部结构框图如下：<img src="/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424180315366.png" alt="image-20220424180315366"></p>
+<ol>
+<li><p>数据总线控制器：</p>
+<p>数据总线缓冲器通过8位数据线D7～D0和CPU的数据总线相连，负责与CPU交换信息。</p>
+<p>还可随时把状态寄存器中的内容读到CPU中，在8251A初始化时，分别把方式字、控制字和同步字符送到方式寄存器、控制寄存器和同步字符寄存器中。</p>
+</li>
+<li><p>读/写逻辑</p>
+<p>| $\overline{CS}$ | $\overline{RD}$ | $\overline{WR}$ | $C/\overline{D}$ |       执行的操作       |<br>| :——————-: | :——————-: | :——————-: | :———————: | :——————————: |<br>|        0        |        0        |        1        |        0         |   CPU向8251A输入数据   |<br>|        0        |        1        |        0        |        0         |   CPU向8251A输出数据   |<br>|        0        |        0        |        1        |        1         |   CPU读取8251A的状态   |<br>|        0        |        1        |        0        |        1         | CPU向8251A写入控制命令 |</p>
+</li>
+<li><p>接收缓冲器与接收控制器</p>
+</li>
+<li><p>发送缓冲器与发送控制器（异步方式）</p>
+</li>
+<li><p>调制/解调器控制逻辑</p>
+</li>
+</ol>
+<h2 id="8251A的编程"><a href="#8251A的编程" class="headerlink" title="8251A的编程"></a>8251A的编程</h2><h4 id="8251A的编程地址"><a href="#8251A的编程地址" class="headerlink" title="8251A的编程地址"></a>8251A的编程地址</h4><p>8251A只需要两个端口地址：一个用于数据端口，一个用于控制/状态端口。数据输入输出用读信号RD和写WR信号区分；状态端口只能读不能写，控制端口只能写不能读。</p>
+<h4 id="8251A的初始化编程流程"><a href="#8251A的初始化编程流程" class="headerlink" title="8251A的初始化编程流程"></a>8251A的初始化编程流程</h4><p>8251A是一种多功能的串行接口芯片，使用前必须向它写入方式字及命令字等，对它进行初始化编程后，才能收发数据。初始化编程主要对8251A的<strong>方式字，命令字和状态字</strong>进行编程设置。</p>
+<ul>
+<li>方式字：确定8251A的工作方式（异步，波特率，字符长度，奇偶校验）</li>
+<li>命令字：控制8251A按方式字所规定的方式工作（允许，禁止收发数据，启动搜索同步字符，8251复位）</li>
+<li>状态字：了解8251A的工作状态。</li>
+</ul>
+<h4 id="8251A的控制字"><a href="#8251A的控制字" class="headerlink" title="8251A的控制字"></a>8251A的控制字</h4><ol>
+<li><p>方式字</p>
+<p>方式字（8位）是8251A在初始化时，用来写入方式选择字用的。方式选择有两种：同步方式和异步方式。方式字最低2位全为0时表示是同步方式，最低2位不全为0时表示是异步方式。</p>
+<p>8251A工作在异步方式下：<img src="/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424193418865.png" alt="image-20220424193418865"></p>
+<p>8251A工作在同步方式下：<img src="/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424193532651.png" alt="image-20220424193532651"></p>
+</li>
+<li><p>命令字</p>
+<p>对8251A初始化时，写入了方式选择字后，接着要写入的是命令字，由命令字来规定8251A的工作状态。</p>
+<p><img src="/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424195735073.png" alt="image-20220424195735073"></p>
+<ul>
+<li>当对8251A初始化时，使用同一个地址，先写入方式字，接着写入同步字符(<strong>异步方式时不写入同步字符</strong>)，最后写入的才是命令字，这个顺序不能改变，否则将出错。</li>
+<li>而初始化以后，再通过这个地址写入的字都是命令字，因此命令字可以随时写入。</li>
+<li>如果要重新设置工作方式，写入方式字，必须先要将控制寄存器的D6位置1（<strong>命令字为40H</strong>），进行内部复位返回到初始化前的状态。当然，外部的RESET也可使8251A复位，而在正常的传输过程中D6=0。</li>
+</ul>
+</li>
+<li><p>状态字（8位）是只读的。CPU可用IN指令来读取状态寄存器 的内容。每位的定义如下：<img src="/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/image-20220424200053808.png" alt="image-20220424200053808"></p>
+</li>
+</ol>
+<h4 id="8251与CPU的数据交换"><a href="#8251与CPU的数据交换" class="headerlink" title="8251与CPU的数据交换"></a>8251与CPU的数据交换</h4><p>查询方式/中断方式</p>
+<ul>
+<li>采用查询方式，在数据交换前应该读取状态寄存器。</li>
+<li>状态寄存器D0=1(TxRDY=1)，CPU可以向8251数据端口写入数据，完成串行数据的发送状态寄存器D1=1 (RxRDY=1) ，CPU可以从8251数据端口读出数据，完成一帧数据的接收。</li>
+<li>采用中断方式则用TxRDY、RxRDY引脚信号提出中断申请。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/username">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/channel_name">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linear_regression/" rel="prev" title="线性回归">
+      <i class="fa fa-chevron-left"></i> 线性回归
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1%E4%B8%8E%E5%8F%AF%E7%BC%96%E7%A8%8B%E6%8E%A5%E5%8F%A38251A"><span class="nav-number">1.</span> <span class="nav-text">串行通信与可编程接口8251A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">一. 概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.1.</span> <span class="nav-text">串行通信的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%81%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">串行数据传送的方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E4%BC%A0%E9%80%81%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%9F%BA%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">串行传送的两种基本工作方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E4%BC%A0%E9%80%81%E9%80%9F%E7%8E%87"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">串行传送速率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%91%E9%80%81%E6%97%B6%E9%92%9F%E5%92%8C%E6%8E%A5%E6%94%B6%E6%97%B6%E9%92%9F"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">发送时钟和接收时钟</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%A1%E5%8F%B7%E7%9A%84%E8%B0%83%E5%88%B6%E4%B8%8E%E8%A7%A3%E8%B0%83"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">信号的调制与解调</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1%E6%8E%A5%E5%8F%A3RS-232C%E6%A0%87%E5%87%86"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">串行通信接口RS-232C标准</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E7%BC%96%E7%A8%8B%E4%B8%B2%E8%A1%8C%E6%8E%A5%E5%8F%A38251A"><span class="nav-number">1.2.</span> <span class="nav-text">可编程串行接口8251A</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8251A%E7%9A%84%E7%BC%96%E7%A8%8B"><span class="nav-number">1.3.</span> <span class="nav-text">8251A的编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8251A%E7%9A%84%E7%BC%96%E7%A8%8B%E5%9C%B0%E5%9D%80"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">8251A的编程地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8251A%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E7%BC%96%E7%A8%8B%E6%B5%81%E7%A8%8B"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">8251A的初始化编程流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8251A%E7%9A%84%E6%8E%A7%E5%88%B6%E5%AD%97"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">8251A的控制字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8251%E4%B8%8ECPU%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2"><span class="nav-number">1.3.0.4.</span> <span class="nav-text">8251与CPU的数据交换</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="wenyi"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">wenyi</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wenyi</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/canvas_lines.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

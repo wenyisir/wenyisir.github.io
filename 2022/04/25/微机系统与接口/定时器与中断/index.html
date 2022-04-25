@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wenyisir.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="定时&#x2F;技术技术和中断技术定时&#x2F;计数技术定时&#x2F;计数器接收信号源发送来的计数信号，到达约定的计数时，发出完成计数的信号。Intel系列的定时&#x2F;计数器为8253和8254。 8254的内部逻辑结构8254有三个完全相同的计数器，可以同时进行三组计数。8254是可编程接口，可以有多种工作方式，工作之前需要进行初始化。控制字寄存器用来保存初始化时的控制字；数据总线缓冲器用于将8254与系统数据总线$D_0$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="定时&#x2F;技术技术和中断技术">
+<meta property="og:url" content="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/index.html">
+<meta property="og:site_name" content="文溢の博客">
+<meta property="og:description" content="定时&#x2F;技术技术和中断技术定时&#x2F;计数技术定时&#x2F;计数器接收信号源发送来的计数信号，到达约定的计数时，发出完成计数的信号。Intel系列的定时&#x2F;计数器为8253和8254。 8254的内部逻辑结构8254有三个完全相同的计数器，可以同时进行三组计数。8254是可编程接口，可以有多种工作方式，工作之前需要进行初始化。控制字寄存器用来保存初始化时的控制字；数据总线缓冲器用于将8254与系统数据总线$D_0$">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users/46581/AppData/Roaming/Typora/typora-user-images/image-20220425201128212.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users/46581/AppData/Roaming/Typora/typora-user-images/image-20220425211306511.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users/46581/AppData/Roaming/Typora/typora-user-images/image-20220425213100991.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users/46581/AppData/Roaming/Typora/typora-user-images/image-20220425213607043.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users/46581/AppData/Roaming/Typora/typora-user-images/image-20220425214621671.png">
+<meta property="og:image" content="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users/46581/AppData/Roaming/Typora/typora-user-images/image-20220425214629723.png">
+<meta property="article:published_time" content="2022-04-25T12:45:27.000Z">
+<meta property="article:modified_time" content="2022-04-25T14:03:07.369Z">
+<meta property="article:author" content="wenyi">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users/46581/AppData/Roaming/Typora/typora-user-images/image-20220425201128212.png">
+
+<link rel="canonical" href="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>定时/技术技术和中断技术 | 文溢の博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="文溢の博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">文溢の博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">study is a lifelong journey!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="wenyi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="文溢の博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          定时/技术技术和中断技术
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-25 20:45:27 / 修改时间：22:03:07" itemprop="dateCreated datePublished" datetime="2022-04-25T20:45:27+08:00">2022-04-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BE%AE%E7%A7%AF%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/" itemprop="url" rel="index"><span itemprop="name">微积系统与接口</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="定时-技术技术和中断技术"><a href="#定时-技术技术和中断技术" class="headerlink" title="定时/技术技术和中断技术"></a>定时/技术技术和中断技术</h1><h2 id="定时-计数技术"><a href="#定时-计数技术" class="headerlink" title="定时/计数技术"></a>定时/计数技术</h2><p>定时/计数器接收信号源发送来的计数信号，到达约定的计数时，发出完成计数的信号。Intel系列的定时/计数器为8253和8254。</p>
+<h3 id="8254的内部逻辑结构"><a href="#8254的内部逻辑结构" class="headerlink" title="8254的内部逻辑结构"></a>8254的内部逻辑结构</h3><p>8254有三个完全相同的计数器，可以同时进行三组计数。8254是可编程接口，可以有多种工作方式，<strong>工作之前需要进行初始化</strong>。控制字寄存器用来保存初始化时的控制字；数据总线缓冲器用于将8254与系统数据总线$D_0$~$D_7$相连。读写控制逻辑接收CPU发来的读写信号和地址信号，来确定数据传输的方向是读出还是写入，并且选择所操作的寄存器。<img src="/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220425201128212.png" alt="image-20220425201128212"></p>
+<p>8254的构成：计数初值寄存器，减1计数器和当前计数值锁存器。</p>
+<ul>
+<li>计数初值寄存器：用来存放计数初值，长度16位，故最大值为 <strong>65536</strong>。计数初值和减1计数器的初值在初始化时同时装入，在计数过程中一直<strong>保持不变</strong>。作用为：在自动重装操作中为减1计数器提供初值，以便重复使用。</li>
+<li>自动重装：当减1计数器减1到0后，可自动把计数初值寄存器的内容再装入减1计数器，重新开始计数。</li>
+<li>减1计数器：长度为16位，每来一个时钟脉冲，就作减一运算，直到将计数值减为0。</li>
+<li>当前计数值锁存器：长度位16位，用来锁存减1计数器的内容，以供读出。</li>
+</ul>
+<h3 id="8254的外部特性"><a href="#8254的外部特性" class="headerlink" title="8254的外部特性"></a>8254的外部特性</h3><h4 id="1-面向CPU的信号线"><a href="#1-面向CPU的信号线" class="headerlink" title="1.面向CPU的信号线"></a>1.面向CPU的信号线</h4><ul>
+<li>$D_0$~$D_7$是8254与CPU相连的数据线</li>
+<li>$\overline{CS}$是8254选中信号</li>
+<li>$\overline{RD}$是读信号</li>
+<li>$\overline{WR}$是写信号</li>
+<li>$A_1$ $A_0$是地址线，用于选择8254内部的寄存器</li>
+</ul>
+<h4 id="2-面向I-O设备的信号线"><a href="#2-面向I-O设备的信号线" class="headerlink" title="2.面向I/O设备的信号线"></a>2.面向I/O设备的信号线</h4><ul>
+<li>CLK是计数器时钟信号。在8254工作时，每输入一个时钟脉冲信号CLK，就使计数器减1。</li>
+<li>GATA 是门控选通信号。作品是用来禁止，允许或开始计数。对于6种不同工作方式，GATA信号有不同的作用。</li>
+<li>OUT是计数器的输出信号。当计数器减为0时，OUT发出信号，以表示定时或计数已到。</li>
+</ul>
+<h3 id="8254的6种工作方式"><a href="#8254的6种工作方式" class="headerlink" title="8254的6种工作方式"></a>8254的6种工作方式</h3><h4 id="1-方式0—计数结束中断"><a href="#1-方式0—计数结束中断" class="headerlink" title="1. 方式0—计数结束中断"></a>1. 方式0—计数结束中断</h4><p>时序图：<img src="/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220425211306511.png" alt="image-20220425211306511"></p>
+<p>特点：</p>
+<ul>
+<li>当向计数器写完计数值后，开始计数，计数一旦开始，输出端OUT就变成低电平，并在技术过程中一直保持低电平，当计数器减到0时，OUT立即变成高电平。</li>
+<li>GATE为高电平时，计数器工作；GATE为低电平时，计数器停止工作，其计数值保持不变，如果GATE再次变高，计数器从中止处继续计数。</li>
+<li>计数器工作时，如重新写入新的计数值，计数器将按新写人的计数初值重新工作。</li>
+</ul>
+<h4 id="2-方式1—低电平输出（GATE信号上升沿重新计数）"><a href="#2-方式1—低电平输出（GATE信号上升沿重新计数）" class="headerlink" title="2. 方式1—低电平输出（GATE信号上升沿重新计数）"></a>2. 方式1—低电平输出（GATE信号上升沿重新计数）</h4><p>时序图：<img src="/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220425213100991.png" alt="image-20220425213100991"></p>
+<p>方式1为单稳态工作方式。此方式设定以后，OUT就变成高电平，特点：</p>
+<ul>
+<li>写入计数初值后，计数器并不立即工作，直到门控信号GATE有效(变为高电平)之后的一个时钟周期的下降沿，才开始工作，使OUT变成低电平，并在计数过程中一直保持，直到计数值减到0后，才输出高电平。</li>
+<li>计数器工作时，当GATE又出现一个上升沿时，计数器重新装入原计数初值并重新开始计数。</li>
+<li>如果工作期间对计数器写入新的计数初值，则要等到当前的计数值计满回0且GATE再次出现上升沿后，才按新写入的计数初值开始工作。</li>
+</ul>
+<h4 id="3-方式2—周期性负脉冲输出"><a href="#3-方式2—周期性负脉冲输出" class="headerlink" title="3. 方式2—周期性负脉冲输出"></a>3. 方式2—周期性负脉冲输出</h4><p>时序图：<img src="/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220425213607043.png" alt="image-20220425213607043"></p>
+<p>方式2是一种具有自动装入时间常数(计数初值)的N分频器。其工作特点如下:</p>
+<ul>
+<li>计数器计数期间，输出OUT为高电平，计数器回零时，输出一个宽度等于时钟脉冲周期的负脉冲，并自动重新装人原计数初值，一个负脉冲后，OUT又恢复高电平并重新作减法计数。</li>
+<li>计数器工作时，如写入新的计数初值，则计数器仍按原计数值计数直到回零并输出一个负脉冲后，才按新写入的计数值计数。</li>
+<li>GATE为高电平允许计数，如计数时，GATE变为低电平，则停止计数，待GATE恢复为高电平后，计数器按原装人的计数值重新开始计数。</li>
+</ul>
+<h4 id="4-方式3—周期性方波输出"><a href="#4-方式3—周期性方波输出" class="headerlink" title="4. 方式3—周期性方波输出"></a>4. 方式3—周期性方波输出</h4><p>方式3与方式2基本相同，不同之处在于：OUT输出的是占空比为1:1或近似1:1的方波。当计数初值为偶数时，输出在前一半的计数过程中为高电平，在后一半的计数过程中为低电平。当计数初值为奇数时，在前一半加1的计数过程中，OUT为高电平,后一半减1的计数过程中为低电平。</p>
+<h4 id="5-方式4—单次负脉冲输出（软件触发）"><a href="#5-方式4—单次负脉冲输出（软件触发）" class="headerlink" title="5. 方式4—单次负脉冲输出（软件触发）"></a>5. 方式4—单次负脉冲输出（软件触发）</h4><p>时序图：<img src="/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220425214621671.png" alt="image-20220425214621671"></p>
+<p>方式4是一种由软件启动的闸门式计数方式，即由写人计数初值来触发计数器工作。其特点是:</p>
+<ul>
+<li>方式设定后，OUT开始变成高电平，当写完计数初值后，计数器开始计数，计数回0结束，输出一个宽度为一个时钟脉冲的负脉冲，然后输出又恢复高电平，并一直保持。</li>
+<li>GATE为高电平，允许计数器工作。GATE为低电平时，计数器停止工作。当GATE恢复高电平后，计数器又从原装入的计数初值开始作减1计数。</li>
+<li>计数器工作时，如向计数器写入新值，则不影响当前计数状态，当计数器计完回0后，计数器又按新写入的计数初值开始计数。</li>
+</ul>
+<h4 id="6-方式5—单次负脉冲输出（硬件触发）"><a href="#6-方式5—单次负脉冲输出（硬件触发）" class="headerlink" title="6. 方式5—单次负脉冲输出（硬件触发）"></a>6. 方式5—单次负脉冲输出（硬件触发）</h4><p>时序图：<img src="/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220425214629723.png" alt="image-20220425214629723"></p>
+<p>它的工作特点是由GATE上升沿来触发计数器开始工作。</p>
+<ul>
+<li>当写入计数初值后，计数器并不立即开始计数，要由GATE 的上升沿启动计数。计数回零后，输出端输出一个时钟周期的负脉冲后恢复高电平。</li>
+<li>计数时(或计数结束后)，如果GATE再次出现上升沿，计数器将从原装入的计数初值重新计数。</li>
+</ul>
+<p>区分这6种工作方式的主要标志有3点：输出波形不同，启动计数器的触发方式不同，计数过程中门控信号GATE对计数操作的控制不同。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/username">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/channel_name">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/" rel="prev" title="串行通信">
+      <i class="fa fa-chevron-left"></i> 串行通信
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9A%E6%97%B6-%E6%8A%80%E6%9C%AF%E6%8A%80%E6%9C%AF%E5%92%8C%E4%B8%AD%E6%96%AD%E6%8A%80%E6%9C%AF"><span class="nav-number">1.</span> <span class="nav-text">定时&#x2F;技术技术和中断技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E6%97%B6-%E8%AE%A1%E6%95%B0%E6%8A%80%E6%9C%AF"><span class="nav-number">1.1.</span> <span class="nav-text">定时&#x2F;计数技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8254%E7%9A%84%E5%86%85%E9%83%A8%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.1.</span> <span class="nav-text">8254的内部逻辑结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8254%E7%9A%84%E5%A4%96%E9%83%A8%E7%89%B9%E6%80%A7"><span class="nav-number">1.1.2.</span> <span class="nav-text">8254的外部特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%9D%A2%E5%90%91CPU%E7%9A%84%E4%BF%A1%E5%8F%B7%E7%BA%BF"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1.面向CPU的信号线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%9D%A2%E5%90%91I-O%E8%AE%BE%E5%A4%87%E7%9A%84%E4%BF%A1%E5%8F%B7%E7%BA%BF"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">2.面向I&#x2F;O设备的信号线</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8254%E7%9A%846%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.3.</span> <span class="nav-text">8254的6种工作方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%96%B9%E5%BC%8F0%E2%80%94%E8%AE%A1%E6%95%B0%E7%BB%93%E6%9D%9F%E4%B8%AD%E6%96%AD"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">1. 方式0—计数结束中断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%96%B9%E5%BC%8F1%E2%80%94%E4%BD%8E%E7%94%B5%E5%B9%B3%E8%BE%93%E5%87%BA%EF%BC%88GATE%E4%BF%A1%E5%8F%B7%E4%B8%8A%E5%8D%87%E6%B2%BF%E9%87%8D%E6%96%B0%E8%AE%A1%E6%95%B0%EF%BC%89"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">2. 方式1—低电平输出（GATE信号上升沿重新计数）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%96%B9%E5%BC%8F2%E2%80%94%E5%91%A8%E6%9C%9F%E6%80%A7%E8%B4%9F%E8%84%89%E5%86%B2%E8%BE%93%E5%87%BA"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">3. 方式2—周期性负脉冲输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%96%B9%E5%BC%8F3%E2%80%94%E5%91%A8%E6%9C%9F%E6%80%A7%E6%96%B9%E6%B3%A2%E8%BE%93%E5%87%BA"><span class="nav-number">1.1.3.4.</span> <span class="nav-text">4. 方式3—周期性方波输出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E6%96%B9%E5%BC%8F4%E2%80%94%E5%8D%95%E6%AC%A1%E8%B4%9F%E8%84%89%E5%86%B2%E8%BE%93%E5%87%BA%EF%BC%88%E8%BD%AF%E4%BB%B6%E8%A7%A6%E5%8F%91%EF%BC%89"><span class="nav-number">1.1.3.5.</span> <span class="nav-text">5. 方式4—单次负脉冲输出（软件触发）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E6%96%B9%E5%BC%8F5%E2%80%94%E5%8D%95%E6%AC%A1%E8%B4%9F%E8%84%89%E5%86%B2%E8%BE%93%E5%87%BA%EF%BC%88%E7%A1%AC%E4%BB%B6%E8%A7%A6%E5%8F%91%EF%BC%89"><span class="nav-number">1.1.3.6.</span> <span class="nav-text">6. 方式5—单次负脉冲输出（硬件触发）</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="wenyi"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">wenyi</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wenyi</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/canvas_lines.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

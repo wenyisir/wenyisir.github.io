@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2022-04-24T14:07:47.708Z</updated>
+  <updated>2022-04-25T14:03:07.369Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>定时/技术技术和中断技术</title>
+    <link href="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/"/>
+    <id>http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/</id>
+    <published>2022-04-25T12:45:27.000Z</published>
+    <updated>2022-04-25T14:03:07.369Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;定时-技术技术和中断技术&quot;&gt;&lt;a href=&quot;#定时-技术技术和中断技术&quot; class=&quot;headerlink&quot; title=&quot;定时/技术技术和中断技术&quot;&gt;&lt;/a&gt;定时/技术技术和中断技术&lt;/h1&gt;&lt;h2 id=&quot;定时-计数技术&quot;&gt;&lt;a href=&quot;#定时-计数技术&quot; class=&quot;headerlink&quot; title=&quot;定时/计数技术&quot;&gt;&lt;/a&gt;定时/计数技术&lt;/h2&gt;&lt;p&gt;定时/计数器接收信号源发送来的计数信号，到达约定的计数时，发出完成计数的信号。Intel系列的定时/计数器为8253和8254。&lt;/p&gt;
+&lt;h3 id=&quot;8254的内部逻辑结构&quot;&gt;&lt;a href=&quot;#8254的内部逻辑结构&quot; class=&quot;headerlink&quot; title=&quot;8254的内部逻辑结构&quot;&gt;&lt;/a&gt;8254的内部逻辑结构&lt;/h3&gt;&lt;p&gt;8254有三个完全相同的计数器，可以同时进行三组计数。8254是可编程接口，可以有多种工作方式，&lt;strong&gt;工作之前需要进行初始化&lt;/strong&gt;。控制字寄存器用来保存初始化时的控制字；数据总线缓冲器用于将8254与系统数据总线$D_0$~$D_7$相连。读写控制逻辑接收CPU发来的读写信号和地址信号，来确定数据传输的方向是读出还是写入，并且选择所操作的寄存器。&lt;img src=&quot;/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220425201128212.png&quot; alt=&quot;image-20220425201128212&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="微积系统与接口" scheme="http://wenyisir.github.io/categories/%E5%BE%AE%E7%A7%AF%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>串行通信</title>
@@ -40,26 +58,6 @@
   </entry>
   
   <entry>
-    <title>数据操作</title>
-    <link href="http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/"/>
-    <id>http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/</id>
-    <published>2022-01-10T15:30:41.000Z</published>
-    <updated>2022-02-17T10:47:12.143Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;1-张量创建&quot;&gt;&lt;a href=&quot;#1-张量创建&quot; class=&quot;headerlink&quot; title=&quot;1. 张量创建&quot;&gt;&lt;/a&gt;1. 张量创建&lt;/h3&gt;&lt;p&gt;使用arrange创建一个行向量x。这个行向量包含0开始的前12个整数，默认为浮点数&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;x = torch.arange(&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;可以通过张量的shape属性来访问形状&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;x.shape&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="深度学习笔记" scheme="http://wenyisir.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>线性回归</title>
     <link href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linear_regression/"/>
     <id>http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linear_regression/</id>
@@ -79,6 +77,26 @@
     
     
     <category term="机器学习" scheme="http://wenyisir.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数据操作</title>
+    <link href="http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/"/>
+    <id>http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/</id>
+    <published>2022-01-10T15:30:41.000Z</published>
+    <updated>2022-02-17T10:47:12.143Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-张量创建&quot;&gt;&lt;a href=&quot;#1-张量创建&quot; class=&quot;headerlink&quot; title=&quot;1. 张量创建&quot;&gt;&lt;/a&gt;1. 张量创建&lt;/h3&gt;&lt;p&gt;使用arrange创建一个行向量x。这个行向量包含0开始的前12个整数，默认为浮点数&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;x = torch.arange(&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可以通过张量的shape属性来访问形状&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;x.shape&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="深度学习笔记" scheme="http://wenyisir.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>

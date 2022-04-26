@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2022-04-25T14:03:07.369Z</updated>
+  <updated>2022-04-26T13:24:02.096Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>输入输出接口</title>
+    <link href="http://wenyisir.github.io/2022/04/26/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8E%A5%E5%8F%A3/"/>
+    <id>http://wenyisir.github.io/2022/04/26/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8E%A5%E5%8F%A3/</id>
+    <published>2022-04-26T13:23:16.000Z</published>
+    <updated>2022-04-26T13:24:02.096Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;接口技术&quot;&gt;&lt;a href=&quot;#接口技术&quot; class=&quot;headerlink&quot; title=&quot;接口技术&quot;&gt;&lt;/a&gt;接口技术&lt;/h2&gt;&lt;h3 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h3&gt;&lt;p&gt;在CPU和外设之间设置接口电路主要有以下一些原因:&lt;br&gt;（1）CPU与外设两者的信号线不兼容，在信号线功能定义、逻辑定义和时序关系上都不一致;&lt;br&gt;（2）两者的工作速度不兼容，CPU速度快，外设速度慢，相差好几个数量级。&lt;br&gt;（3）若不通过接口，由CPU直接对外设的操作进行控制，则CPU效率很低，会降低计算机性能。&lt;br&gt;（4）若外设直接由CPU控制，也会使外设的硬件结构依赖于CPU，对外设本身的发展不利。&lt;br&gt;采用了接口电路之后，不同厂商、不同时期的主机和外设就有可能连接使用了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CPU与接口交换数据的控制方式&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;查询方式&lt;/p&gt;
+&lt;p&gt;CPU传送数据前，检查外设是否准备好，若没有准备好，继续查其状态，直至外设准备好了，才进行数据传送。具体做法是在程序中安排一段由输入输出指令和测试指令及转移指令组成的程序段。CPU使用测试指令和条件转移指令循环检测设备完成准备工作的状态，一旦设备准备好，CPU执行传送指令，实现CPU与接口之间的数据传送。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;中断方式&lt;/p&gt;
+&lt;p&gt;在传送数据时，如果外设没有做好数据传送的准备，CPU可先执行与传送数据无关的其他指令。等到外设做好传送数据的准备后，再向CPU发出请求，CPU响应该请求，暂停正在运行的程序，转去执行用来进行数据传送的中断服务程序，完成数据传送后，再返回原来的程序继续执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DMA方式&lt;/p&gt;
+&lt;p&gt;数据的传送不经过CPU，由DMA控制器来实现内存与外设，或外设与外设的快速传送。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="微积系统与接口" scheme="http://wenyisir.github.io/categories/%E5%BE%AE%E7%A7%AF%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>定时/技术技术和中断技术</title>
     <link href="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/"/>
     <id>http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/</id>
     <published>2022-04-25T12:45:27.000Z</published>
-    <updated>2022-04-25T14:03:07.369Z</updated>
+    <updated>2022-04-25T14:06:46.051Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;定时-技术技术和中断技术&quot;&gt;&lt;a href=&quot;#定时-技术技术和中断技术&quot; class=&quot;headerlink&quot; title=&quot;定时/技术技术和中断技术&quot;&gt;&lt;/a&gt;定时/技术技术和中断技术&lt;/h1&gt;&lt;h2 id=&quot;定时-计数技术&quot;&gt;&lt;a href=&quot;#定时-计数技术&quot; class=&quot;headerlink&quot; title=&quot;定时/计数技术&quot;&gt;&lt;/a&gt;定时/计数技术&lt;/h2&gt;&lt;p&gt;定时/计数器接收信号源发送来的计数信号，到达约定的计数时，发出完成计数的信号。Intel系列的定时/计数器为8253和8254。&lt;/p&gt;
@@ -39,7 +68,7 @@
     <link href="http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/"/>
     <id>http://wenyisir.github.io/2022/04/24/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1/</id>
     <published>2022-04-24T12:45:27.000Z</published>
-    <updated>2022-04-24T14:07:47.708Z</updated>
+    <updated>2022-04-26T12:29:25.669Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;串行通信与可编程接口8251A&quot;&gt;&lt;a href=&quot;#串行通信与可编程接口8251A&quot; class=&quot;headerlink&quot; title=&quot;串行通信与可编程接口8251A&quot;&gt;&lt;/a&gt;串行通信与可编程接口8251A&lt;/h1&gt;&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;h3 id=&quot;串行通信的概念&quot;&gt;&lt;a href=&quot;#串行通信的概念&quot; class=&quot;headerlink&quot; title=&quot;串行通信的概念&quot;&gt;&lt;/a&gt;串行通信的概念&lt;/h3&gt;&lt;ul&gt;

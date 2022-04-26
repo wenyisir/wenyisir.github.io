@@ -162,6 +162,93 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/04/26/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8E%A5%E5%8F%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="wenyi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="文溢の博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/26/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8E%A5%E5%8F%A3/" class="post-title-link" itemprop="url">输入输出接口</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-26 21:23:16 / 修改时间：21:24:02" itemprop="dateCreated datePublished" datetime="2022-04-26T21:23:16+08:00">2022-04-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BE%AE%E7%A7%AF%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/" itemprop="url" rel="index"><span itemprop="name">微积系统与接口</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="接口技术"><a href="#接口技术" class="headerlink" title="接口技术"></a>接口技术</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>在CPU和外设之间设置接口电路主要有以下一些原因:<br>（1）CPU与外设两者的信号线不兼容，在信号线功能定义、逻辑定义和时序关系上都不一致;<br>（2）两者的工作速度不兼容，CPU速度快，外设速度慢，相差好几个数量级。<br>（3）若不通过接口，由CPU直接对外设的操作进行控制，则CPU效率很低，会降低计算机性能。<br>（4）若外设直接由CPU控制，也会使外设的硬件结构依赖于CPU，对外设本身的发展不利。<br>采用了接口电路之后，不同厂商、不同时期的主机和外设就有可能连接使用了。</p>
+<p><strong>CPU与接口交换数据的控制方式</strong></p>
+<ol>
+<li><p>查询方式</p>
+<p>CPU传送数据前，检查外设是否准备好，若没有准备好，继续查其状态，直至外设准备好了，才进行数据传送。具体做法是在程序中安排一段由输入输出指令和测试指令及转移指令组成的程序段。CPU使用测试指令和条件转移指令循环检测设备完成准备工作的状态，一旦设备准备好，CPU执行传送指令，实现CPU与接口之间的数据传送。</p>
+</li>
+<li><p>中断方式</p>
+<p>在传送数据时，如果外设没有做好数据传送的准备，CPU可先执行与传送数据无关的其他指令。等到外设做好传送数据的准备后，再向CPU发出请求，CPU响应该请求，暂停正在运行的程序，转去执行用来进行数据传送的中断服务程序，完成数据传送后，再返回原来的程序继续执行。</p>
+</li>
+<li><p>DMA方式</p>
+<p>数据的传送不经过CPU，由DMA控制器来实现内存与外设，或外设与外设的快速传送。</p>
+</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/04/26/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8E%A5%E5%8F%A3/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -187,7 +274,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-04-25 20:45:27 / 修改时间：22:03:07" itemprop="dateCreated datePublished" datetime="2022-04-25T20:45:27+08:00">2022-04-25</time>
+              <time title="创建时间：2022-04-25 20:45:27 / 修改时间：22:06:46" itemprop="dateCreated datePublished" datetime="2022-04-25T20:45:27+08:00">2022-04-25</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -261,10 +348,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-04-24 20:45:27 / 修改时间：22:07:47" itemprop="dateCreated datePublished" datetime="2022-04-24T20:45:27+08:00">2022-04-24</time>
+              <time title="创建时间：2022-04-24 20:45:27" itemprop="dateCreated datePublished" datetime="2022-04-24T20:45:27+08:00">2022-04-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 20:29:25" itemprop="dateModified" datetime="2022-04-26T20:29:25+08:00">2022-04-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -763,7 +856,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

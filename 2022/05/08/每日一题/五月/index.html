@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"wenyisir.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="接口技术基本概念在CPU和外设之间设置接口电路主要有以下一些原因:（1）CPU与外设两者的信号线不兼容，在信号线功能定义、逻辑定义和时序关系上都不一致;（2）两者的工作速度不兼容，CPU速度快，外设速度慢，相差好几个数量级。（3）若不通过接口，由CPU直接对外设的操作进行控制，则CPU效率很低，会降低计算机性能。（4）若外设直接由CPU控制，也会使外设的硬件结构依赖于CPU，对外设本身的发展不利。">
+  <meta name="description" content="中值定理部分 2022.5.8 设 $f(x)$ 在 $[a,b]$ 连续，在 $(a,b)$ 可导，且 $f(a)&#x3D;f(b)&#x3D;0$ ，证明：  存在 $\xi\in(a,b)$，$f’(\xi)+f(\xi)&#x3D;0$ 存在 $\eta\in(a,b)$，$f’(\eta)-f(\eta)&#x3D;0$     2022.5.9 设 $f(x)$ 在 $[0,a]$ 上连续，在 $(0,a)$ 内可导，且">
 <meta property="og:type" content="article">
-<meta property="og:title" content="输入输出接口">
-<meta property="og:url" content="http://wenyisir.github.io/2022/04/26/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8E%A5%E5%8F%A3/index.html">
+<meta property="og:title" content="五月">
+<meta property="og:url" content="http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%BA%94%E6%9C%88/index.html">
 <meta property="og:site_name" content="文溢の博客">
-<meta property="og:description" content="接口技术基本概念在CPU和外设之间设置接口电路主要有以下一些原因:（1）CPU与外设两者的信号线不兼容，在信号线功能定义、逻辑定义和时序关系上都不一致;（2）两者的工作速度不兼容，CPU速度快，外设速度慢，相差好几个数量级。（3）若不通过接口，由CPU直接对外设的操作进行控制，则CPU效率很低，会降低计算机性能。（4）若外设直接由CPU控制，也会使外设的硬件结构依赖于CPU，对外设本身的发展不利。">
+<meta property="og:description" content="中值定理部分 2022.5.8 设 $f(x)$ 在 $[a,b]$ 连续，在 $(a,b)$ 可导，且 $f(a)&#x3D;f(b)&#x3D;0$ ，证明：  存在 $\xi\in(a,b)$，$f’(\xi)+f(\xi)&#x3D;0$ 存在 $\eta\in(a,b)$，$f’(\eta)-f(\eta)&#x3D;0$     2022.5.9 设 $f(x)$ 在 $[0,a]$ 上连续，在 $(0,a)$ 内可导，且">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-04-26T13:23:16.000Z">
-<meta property="article:modified_time" content="2022-04-26T13:24:02.096Z">
+<meta property="article:published_time" content="2022-05-08T13:27:41.000Z">
+<meta property="article:modified_time" content="2022-07-24T11:17:58.994Z">
 <meta property="article:author" content="wenyi">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://wenyisir.github.io/2022/04/26/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8E%A5%E5%8F%A3/">
+<link rel="canonical" href="http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%BA%94%E6%9C%88/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>输入输出接口 | 文溢の博客</title>
+  <title>五月 | 文溢の博客</title>
   
 
 
@@ -167,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/04/26/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8E%A5%E5%8F%A3/">
+    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%BA%94%E6%9C%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/header.jpg">
@@ -180,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          输入输出接口
+          五月
         </h1>
 
         <div class="post-meta">
@@ -189,17 +189,23 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-04-26 21:23:16 / 修改时间：21:24:02" itemprop="dateCreated datePublished" datetime="2022-04-26T21:23:16+08:00">2022-04-26</time>
+              <time title="创建时间：2022-05-08 21:27:41" itemprop="dateCreated datePublished" datetime="2022-05-08T21:27:41+08:00">2022-05-08</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-24 19:17:58" itemprop="dateModified" datetime="2022-07-24T19:17:58+08:00">2022-07-24</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BE%AE%E7%A7%AF%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/" itemprop="url" rel="index"><span itemprop="name">微积系统与接口</span></a>
+                  <a href="/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">每日一题</span></a>
                 </span>
             </span>
 
@@ -214,53 +220,138 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="接口技术"><a href="#接口技术" class="headerlink" title="接口技术"></a>接口技术</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>在CPU和外设之间设置接口电路主要有以下一些原因:<br>（1）CPU与外设两者的信号线不兼容，在信号线功能定义、逻辑定义和时序关系上都不一致;<br>（2）两者的工作速度不兼容，CPU速度快，外设速度慢，相差好几个数量级。<br>（3）若不通过接口，由CPU直接对外设的操作进行控制，则CPU效率很低，会降低计算机性能。<br>（4）若外设直接由CPU控制，也会使外设的硬件结构依赖于CPU，对外设本身的发展不利。<br>采用了接口电路之后，不同厂商、不同时期的主机和外设就有可能连接使用了。</p>
-<p><strong>CPU与接口交换数据的控制方式</strong></p>
+        <h1 id="中值定理部分"><a href="#中值定理部分" class="headerlink" title="中值定理部分"></a>中值定理部分</h1><ul>
+<li><p>2022.5.8</p>
+<p>设 $f(x)$ 在 $[a,b]$ 连续，在 $(a,b)$ 可导，且 $f(a)=f(b)=0$ ，证明：</p>
 <ol>
-<li><p>查询方式</p>
-<p>CPU传送数据前，检查外设是否准备好，若没有准备好，继续查其状态，直至外设准备好了，才进行数据传送。具体做法是在程序中安排一段由输入输出指令和测试指令及转移指令组成的程序段。CPU使用测试指令和条件转移指令循环检测设备完成准备工作的状态，一旦设备准备好，CPU执行传送指令，实现CPU与接口之间的数据传送。</p>
-</li>
-<li><p>中断方式</p>
-<p>在传送数据时，如果外设没有做好数据传送的准备，CPU可先执行与传送数据无关的其他指令。等到外设做好传送数据的准备后，再向CPU发出请求，CPU响应该请求，暂停正在运行的程序，转去执行用来进行数据传送的中断服务程序，完成数据传送后，再返回原来的程序继续执行。</p>
-</li>
-<li><p>DMA方式</p>
-<p>数据的传送不经过CPU，由DMA控制器来实现内存与外设，或外设与外设的快速传送。</p>
-</li>
+<li>存在 $\xi\in(a,b)$，$f’(\xi)+f(\xi)=0$</li>
+<li>存在 $\eta\in(a,b)$，$f’(\eta)-f(\eta)=0$</li>
 </ol>
-<h3 id="功能和组成"><a href="#功能和组成" class="headerlink" title="功能和组成"></a>功能和组成</h3><p><strong>I/O设备接口的功能：</strong></p>
-<ul>
-<li>执行CPU的命令功能</li>
-<li>返回外设状态功能</li>
-<li>数据缓冲功能</li>
-<li>信号转换功能</li>
-<li>设备选择功能</li>
-<li>数据宽度与数据格式的转换功能</li>
+</li>
 </ul>
-<p><strong>I/O设备接口的组成：</strong>硬件电路和软件变成</p>
-<h2 id="I-O端口地址译码技术"><a href="#I-O端口地址译码技术" class="headerlink" title="I/O端口地址译码技术"></a>I/O端口地址译码技术</h2><h3 id="I-O端口的概念"><a href="#I-O端口的概念" class="headerlink" title="I/O端口的概念"></a>I/O端口的概念</h3><p>一个接口可有几个端口，如命令端口，状态端口和数据端口，分别对应于命令寄存器、状态寄存器和数据寄存器。并且，CPU的命令只能写到命令端口，外设(或接口)的状态只能从状态端口读取，数据只能写(读)至(自)数据端口。3种信息与3种端口类型一一对应，不能错位，否则，接口电路就不能正常工作，就会产生误操作。</p>
-<h3 id="I-O端口地址编址方式"><a href="#I-O端口地址编址方式" class="headerlink" title="I/O端口地址编址方式"></a>I/O端口地址编址方式</h3><p>有两种编址方式，一是端口地址和存储器地址统一编址，即存储器映射方式，或统一编制方式；另一是I/О端口地址和存储器地址分开编址，即独立I/O方式。</p>
-<h4 id="8086中的I-O指令"><a href="#8086中的I-O指令" class="headerlink" title="8086中的I/O指令"></a>8086中的I/O指令</h4><ol>
-<li><p>输入指令IN</p>
-<p><strong>指令格式：IN AL/AX , PORT</strong><br><strong>功能：将指定端口的内容传送到累加器中。受到影响的标志位：没有</strong><br><strong>说明：</strong>PORT为端口地址，当PORT是0~255时，既可使用直接寻址，也可使用间接寻址；当PORT大于255时，必须使用间接寻址。用于间接寻址的寄存器一定是<strong>DX</strong>，这是DX的一种特殊用法。</p>
-</li>
-<li><p>输出指令OUT</p>
-<p><strong>指令格式：OUT  PORT ， AL/AX</strong><br><strong>功能：将累加去的内容传送到指定的端口</strong><br><strong>说明：</strong>同IN指令</p>
-</li>
+<ul>
+<li>2022.5.9<ol>
+<li>设 $f(x)$ 在 $[0,a]$ 上连续，在 $(0,a)$ 内可导，且 $f(a)=0$，证明: 存在一点 $\xi∈(0,a)$，使得 $f(\xi)+\xi f’(\xi)=0$.</li>
+<li>设 $f(x)$ 在 $[0,a]$ 上连续，在 $(0,a)$ 内可导，且 $f(a)=0$，证明: 存在一点 $\xi∈(0,a)$，使得 $nf(\xi)+\xi f’(\xi)=0$.</li>
 </ol>
-<h3 id="I-O端口地址译码方式"><a href="#I-O端口地址译码方式" class="headerlink" title="I/O端口地址译码方式"></a>I/O端口地址译码方式</h3><p>PC的I/O端口地址译码主要有全译码、部分译码两种方法。</p>
-<ul>
-<li>全译码<br>I/O地址线全部作为译码电路的输人参加译码，一般在要求产生单个端口的选中信号时采用。</li>
-<li>部分译码<br>只有高位地址线参加译码，产生接口芯片的选中信号，低位地址线不参加译码。<br>具体做法是：把I/O地址线分为两部分，一是高位地址线参加译码，译码电路的输出连接到I/O接口芯片的片选信号，实现接口芯片间寻址；二是低位地址线不参加译码，直接连接到接口芯片，进行接口芯片的片内端口寻址。<strong>低位地址线的根树取决于接口芯片所用端口地址的数量。</strong></li>
+</li>
 </ul>
-<p><strong>I/O地址译码电路的输入与输出信号线</strong></p>
+<ul>
+<li><p>2022.5.10</p>
+<p>已知函数 $f(x)$ 具有二阶导数，且 $\lim\limits_{x\rightarrow0} \frac{f(x)}{x}=0\$，$f(1)=0$  试证：在区间 $(0,1)$ 内至少<br>存在一点$\xi$，使得$f’’(\xi)$=0.</p>
+</li>
+</ul>
+<ul>
+<li><p>2022.5.11</p>
+<p>已知函数 $f(x)$ 在 $[0,1]$ 连续，$(0,1)$ 可微，$f(0)=f(1)=0$，$f(\frac{1}{2})=1$</p>
 <ol>
-<li><p>输入信号</p>
-<p>I/О端口地址译码电路的作用是把地址和控制信号进行逻辑组合,产生对接口芯片的选择信号。因此，译码电路的输入端除了地址信号线外，还引入一些控制信号，如 AEN，IOR，IOW。其中，AEN信号表示是否采用DMA方式传输，AEN=1，表示用DMA 方式，系统总线由DMA控制器占用；AEN=0，表示非DMA方式，系统总线由CPU占用，只有此时CPU才会与接口传送信息。</p>
+<li>证明：存在 $\xi \in (\frac{1}{2},1)$，$f(\xi) = \xi$</li>
+<li>存在 $\eta\in(0,\xi)$，$f’(\eta)=f(\eta)-\eta+1$</li>
+</ol>
 </li>
-<li><p>输出信号</p>
-<p>输出信号就是1个CS片选信号，低电平有效。CS=0，有效，芯片选中；CS=1。无效，芯片未选中。</p>
+</ul>
+<ul>
+<li><p>2022.5.12</p>
+<p>设 $f(x)$ 在闭区间 $[0,1]$ 连续，开区间 $(0,1)$ 可导，$f(0)= 0, f(1)=\frac{1}{3}$，证明：存在 $\xi \in (0,\frac{1}{2})$，$\eta\in(\frac{1}{2},1)$，使得 $f’(\xi)+f’(\eta) = \xi^2+\eta^2$</p>
+</li>
+</ul>
+<p>​    </p>
+<ul>
+<li><p>2022.5.13</p>
+<p>设 $f(x)$ 在区间 $[a,b]$ 上连续，在 $(a,b)$ 可导，且 $a,b$ 同号，证明：存在 $\xi,\eta\in(a,b)$ ，使得$abf’(\xi)=\eta^{2}f’(\eta)$</p>
+</li>
+</ul>
+<ul>
+<li><p>2022.5.14</p>
+<p>设 $f(x)$ 在 $[a,b]$ 连续，$(a,b)$ 可导，证明：存在 $\xi\in(a,b)$，使得 $f(b)-f(a)=\xi f’(\xi)\ln\frac{b}{a}\$.</p>
+</li>
+</ul>
+<h1 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h1><ul>
+<li><p>2022.5.15<br>求下列不定积分：</p>
+<ol>
+<li><font size="4"> $\int\frac{x+\ln(1-x)}{x^2}\rm dx\\$ </font>
+</li>
+<li><font size="4">$ \int\frac{x^2}{1+x^2}\arctan \rm xdx\\$ </font>
+</li>
+<li><font size="4">$ \int \frac{x\cos^4\frac{x}{2}}{\sin^3x} \rm dx\\$ </font>
+
+
+
+
 </li>
 </ol>
+</li>
+</ul>
+<ul>
+<li><p>2022.5.16</p>
+<font>求下列不定积分或极限:</font>
+
+<ol>
+<li><font size="4"> $\int(\arcsin x)^2 \rm dx\\$</font></li>
+<li><font size="4" color="black">$\lim \limits_{n\rightarrow \infty} [\frac{n}{n^2+2^2}+\frac{n}{n^2+1^2}+\dots +\frac{n}{n^2+n^2}]\\$</font>
+
+
+
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>2022.5.17</p>
+<p>求下列定积分：</p>
+<ol>
+<li><font size="4"> $\int_{-2}^{2}[\ln(x+\sqrt{1+x^2})+\sqrt{(1-\frac{x^2}{4})}] \rm dx\\$</font></li>
+<li><font size="4">$\int_{-\pi}^{\pi}|x|(x^3+\sin^2x)\cos^2x \rm dx\\$</font></li>
+<li><font size="4">$\int_{0}^{\pi}\sqrt{1-\sin x}\rm dx\\$</font>
+
+
+
+
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>2022.5.18</p>
+<p>求下列定积分：</p>
+<ol>
+<li><script type="math/tex; mode=display">\int_{\sqrt{e}}^{e^{\frac{3}{4}}}\frac{\rm dx}{x\sqrt{\ln x(1-\ln x)}} \\</script></li>
+<li><font size="4">$\int_{0}^{1}\frac{\arcsin {\sqrt{x}}}{\sqrt{x(1-x)}} {\rm dx} \\$</font></li>
+<li><font size="4">$\int_{0}^{1}\frac{\ln(1+x)}{(2-x)^2}{\rm dx} \\$</font>
+
+
+
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>2022.5.19<ol>
+<li>已知函数$f(x) = \int_1^{x}\sqrt{1+t^4}{\rm d}t\$，则$\int_0^1x^2f(x){\rm d}x\$值是多少？</li>
+<li>已知 $f(x)$ 连续，$\int_{0}^{x}tf(x-t){\rm d}t=1-\cos x\$，求 $\int_{0}^{\frac{\pi}{2}}f(x){\rm d}x\$ 的值</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>2022.5.20</p>
+<p>设 $x\geq -1$ ，则 $\int_{-1}^x(x-|t|){\rm d}t\$ 表达式为</p>
+</li>
+</ul>
+<ul>
+<li><p>2022.07.23</p>
+<p>求下列不定积分:</p>
+<script type="math/tex; mode=display">\begin{aligned}&\int \frac{1}{\cos^3x}dx \\ &=\int \sec x \ d \tan x \\ &=\sec x \tan x - \int \tan^2x \sec x \ dx \\&=\sec x \tan x - \int (\sec^2x - 1)\sec x \  dx \\ &=\sec x \tan x - \int \sec^3x dx+\int \sec x  dx \\&=\sec x \tan x - \int \frac{1}{\cos^3 x} dx + \ln|\sec x+ \tan x| \end{aligned}</script></li>
+</ul>
+<ul>
+<li><p>2022.07.24</p>
+<ol>
+<li><p>$\int\frac{\arcsin{\sqrt{x}}+\ln x}{\sqrt{x}} dx \\ $ </p>
+</li>
+<li><p>$\int\frac{x+2}{(x^2+1)^2} dx \$  </p>
+</li>
+</ol>
+</li>
+</ul>
 
     </div>
 
@@ -325,12 +416,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/" rel="prev" title="定时/技术技术和中断技术">
-      <i class="fa fa-chevron-left"></i> 定时/技术技术和中断技术
+    <a href="/2022/04/26/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8E%A5%E5%8F%A3/" rel="prev" title="输入输出接口">
+      <i class="fa fa-chevron-left"></i> 输入输出接口
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%BA%94%E6%9C%88/" rel="next" title="五月">
-      五月 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/07/24/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%B8%83%E6%9C%88/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -390,7 +481,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF"><span class="nav-number">1.</span> <span class="nav-text">接口技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%92%8C%E7%BB%84%E6%88%90"><span class="nav-number">1.2.</span> <span class="nav-text">功能和组成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#I-O%E7%AB%AF%E5%8F%A3%E5%9C%B0%E5%9D%80%E8%AF%91%E7%A0%81%E6%8A%80%E6%9C%AF"><span class="nav-number">2.</span> <span class="nav-text">I&#x2F;O端口地址译码技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#I-O%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">2.1.</span> <span class="nav-text">I&#x2F;O端口的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#I-O%E7%AB%AF%E5%8F%A3%E5%9C%B0%E5%9D%80%E7%BC%96%E5%9D%80%E6%96%B9%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">I&#x2F;O端口地址编址方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8086%E4%B8%AD%E7%9A%84I-O%E6%8C%87%E4%BB%A4"><span class="nav-number">2.2.1.</span> <span class="nav-text">8086中的I&#x2F;O指令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#I-O%E7%AB%AF%E5%8F%A3%E5%9C%B0%E5%9D%80%E8%AF%91%E7%A0%81%E6%96%B9%E5%BC%8F"><span class="nav-number">2.3.</span> <span class="nav-text">I&#x2F;O端口地址译码方式</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86%E9%83%A8%E5%88%86"><span class="nav-number">1.</span> <span class="nav-text">中值定理部分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A7%AF%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">积分</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

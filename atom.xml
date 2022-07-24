@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2022-07-24T10:59:42.494Z</updated>
+  <updated>2022-07-24T11:18:57.682Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>每日一题</title>
-    <link href="http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
-    <id>http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</id>
+    <title></title>
+    <link href="http://wenyisir.github.io/2022/07/24/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%B8%83%E6%9C%88/"/>
+    <id>http://wenyisir.github.io/2022/07/24/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%B8%83%E6%9C%88/</id>
+    <published>2022-07-24T11:18:12.219Z</published>
+    <updated>2022-07-24T11:18:57.682Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;积分&quot;&gt;&lt;a href=&quot;#积分&quot; class=&quot;headerlink&quot; title=&quot;积分&quot;&gt;&lt;/a&gt;积分&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;2022.07.23&lt;/p&gt;
+&lt;p&gt;求下列不定积分:&lt;/p&gt;
+&lt;script type=&quot;math/tex;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>五月</title>
+    <link href="http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%BA%94%E6%9C%88/"/>
+    <id>http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%BA%94%E6%9C%88/</id>
     <published>2022-05-08T13:27:41.000Z</published>
-    <updated>2022-07-24T10:59:42.494Z</updated>
+    <updated>2022-07-24T11:17:58.994Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;中值定理部分&quot;&gt;&lt;a href=&quot;#中值定理部分&quot; class=&quot;headerlink&quot; title=&quot;中值定理部分&quot;&gt;&lt;/a&gt;中值定理部分&lt;/h1&gt;&lt;ul&gt;
@@ -42,7 +66,7 @@
 &lt;/ul&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;2022.5.10&lt;/p&gt;
-&lt;p&gt;已知函数 $f(x)$ 具有二阶导数，且 $\lim\limits_{x\rightarrow0} \frac{f(x)}{x}=0$，$f(1)=0$  试证：在区间 $(0,1)$ 内至少&lt;br&gt;存在一点$\xi$，使得$f’’(\xi)$=0.&lt;/p&gt;
+&lt;p&gt;已知函数 $f(x)$ 具有二阶导数，且 $\lim\limits_{x\rightarrow0} \frac{f(x)}{x}=0\$，$f(1)=0$  试证：在区间 $(0,1)$ 内至少&lt;br&gt;存在一点$\xi$，使得$f’’(\xi)$=0.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;

@@ -193,7 +193,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-24 19:32:26" itemprop="dateModified" datetime="2022-07-24T19:32:26+08:00">2022-07-24</time>
+                <time title="修改时间：2022-07-24 22:41:03" itemprop="dateModified" datetime="2022-07-24T22:41:03+08:00">2022-07-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -224,13 +224,22 @@
 <ul>
 <li><p>2022.07.24</p>
 <p>求下列不定积分:</p>
-<ol>
-<li><script type="math/tex; mode=display">\int\frac{\arcsin{\sqrt{x}}+\ln x}{\sqrt{x}} dx \\</script></li>
-<li><script type="math/tex; mode=display">\int\frac{x+2}{(x^2+1)^2} dx \\</script></li>
-</ol>
-</li>
+<script type="math/tex; mode=display">
+\begin{aligned} &\int\frac{\arcsin{\sqrt{x}}+\ln x}{\sqrt{x}} dx \\ &= 2\int \arcsin\sqrt{x}+\ln x {\rm d}{\sqrt{x}} \\ 
+&=2\sqrt{x}(\arcsin\sqrt{x} + \sqrt{x}\ln x) - \int\frac{1}{\sqrt{1-x}} dx - 2\int \frac{1}{\sqrt{x}} dx \\
+&= 2\sqrt{x}(\arcsin\sqrt{x} + \sqrt{x}\ln x) + 2\sqrt{1-x}-4\sqrt{x} +C
+\end{aligned}</script></li>
 </ul>
-
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\int \frac{x+2}{(x^2+1)^2} dx \\
+&=\int\frac{x}{(x^2+1)^2} dx +2\int\frac{1}{(x^2+1)^2}dx\\
+&=-\frac{1}{2(x^2+1)} + 2(\int \frac{1}{x^2+1} dx - \int \frac{x^2}{(x^2+1)^2} dx)\\
+&= -\frac{1}{2(x^2+1)} + 2(\arctan x +\frac{1}{2}\int x d\frac{1}{x^2+1} )\\
+&= -\frac{1}{2(x^2+1)} + 2(\arctan x +\frac{x}{2(x^2+1)} - \frac{1}{2}\int \frac{1}{x^2+1} dx ) \\
+&=-\frac{1}{2(x^2+1)} + 2(\arctan x +\frac{x}{2(x^2+1)} - \frac{1}{2}\arctan x ) \\
+&=-\frac{1}{2(x^2+1)} + \arctan x +\frac{x}{(x^2+1)}  +C
+\end{aligned}</script>
       
     </div>
 
@@ -615,7 +624,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/header.jpg">
@@ -629,7 +638,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">Pytorch 基本操作</a>
+            <a href="/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/" class="post-title-link" itemprop="url">支持向量机</a>
         </h2>
 
         <div class="post-meta">
@@ -646,7 +655,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-09 01:14:44" itemprop="dateModified" datetime="2022-05-09T01:14:44+08:00">2022-05-09</time>
+                <time title="修改时间：2022-07-23 18:09:16" itemprop="dateModified" datetime="2022-07-23T18:09:16+08:00">2022-07-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -654,7 +663,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">深度学习笔记</span></a>
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
                 </span>
             </span>
 
@@ -669,13 +678,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="1-张量创建"><a href="#1-张量创建" class="headerlink" title="1. 张量创建"></a>1. 张量创建</h3><p>使用torch.tensor创建张量可以设置创建的张量默认数据类型</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.set_default_tensor_type(torch.FloatTensor)</span><br></pre></td></tr></table></figure>
-<p>创建不同维度的张量</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dim = 0</span></span><br><span class="line">a = torch.tensor(<span class="number">2</span>)</span><br><span class="line"><span class="comment"># dim = 1</span></span><br><span class="line">b = torch.tensor([<span class="number">2</span>])</span><br><span class="line">c = torch.FloatTensor(<span class="number">2</span>)</span><br><span class="line"><span class="comment"># dim = 2</span></span><br><span class="line">d = torch.FloatTensor(<span class="number">2</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+          <h1 id="支持向量机（SVM）"><a href="#支持向量机（SVM）" class="headerlink" title="支持向量机（SVM）"></a>支持向量机（SVM）</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>支持向量机（Support Vector Machine, SVM）是一类按监督学习（supervised learning）方式对数据进行二元分类的广义线性分类器（generalized linear classifier），其决策边界是对学习样本求解的最大边距超平面（maximum-margin hyperplane）。</p>
+<h2 id="非线性SVM优化问题"><a href="#非线性SVM优化问题" class="headerlink" title="非线性SVM优化问题"></a>非线性SVM优化问题</h2><p>最小化：</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/#more" rel="contents">
+              <a class="btn" href="/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -787,7 +794,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/">
+    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/header.jpg">
@@ -801,7 +808,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/" class="post-title-link" itemprop="url">支持向量机</a>
+            <a href="/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">Pytorch 基本操作</a>
         </h2>
 
         <div class="post-meta">
@@ -818,7 +825,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-23 18:09:16" itemprop="dateModified" datetime="2022-07-23T18:09:16+08:00">2022-07-23</time>
+                <time title="修改时间：2022-05-09 01:14:44" itemprop="dateModified" datetime="2022-05-09T01:14:44+08:00">2022-05-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -826,7 +833,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">深度学习笔记</span></a>
                 </span>
             </span>
 
@@ -841,11 +848,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="支持向量机（SVM）"><a href="#支持向量机（SVM）" class="headerlink" title="支持向量机（SVM）"></a>支持向量机（SVM）</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>支持向量机（Support Vector Machine, SVM）是一类按监督学习（supervised learning）方式对数据进行二元分类的广义线性分类器（generalized linear classifier），其决策边界是对学习样本求解的最大边距超平面（maximum-margin hyperplane）。</p>
-<h2 id="非线性SVM优化问题"><a href="#非线性SVM优化问题" class="headerlink" title="非线性SVM优化问题"></a>非线性SVM优化问题</h2><p>最小化：</p>
+          <h3 id="1-张量创建"><a href="#1-张量创建" class="headerlink" title="1. 张量创建"></a>1. 张量创建</h3><p>使用torch.tensor创建张量可以设置创建的张量默认数据类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.set_default_tensor_type(torch.FloatTensor)</span><br></pre></td></tr></table></figure>
+<p>创建不同维度的张量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dim = 0</span></span><br><span class="line">a = torch.tensor(<span class="number">2</span>)</span><br><span class="line"><span class="comment"># dim = 1</span></span><br><span class="line">b = torch.tensor([<span class="number">2</span>])</span><br><span class="line">c = torch.FloatTensor(<span class="number">2</span>)</span><br><span class="line"><span class="comment"># dim = 2</span></span><br><span class="line">d = torch.FloatTensor(<span class="number">2</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/#more" rel="contents">
+              <a class="btn" href="/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

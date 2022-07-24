@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2022-07-24T11:32:26.006Z</updated>
+  <updated>2022-07-24T14:41:03.997Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wenyisir.github.io/2022/07/22/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%B8%83%E6%9C%88/"/>
     <id>http://wenyisir.github.io/2022/07/22/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%B8%83%E6%9C%88/</id>
     <published>2022-07-22T12:15:13.000Z</published>
-    <updated>2022-07-24T11:32:26.006Z</updated>
+    <updated>2022-07-24T14:41:03.997Z</updated>
     
     
       
@@ -159,24 +159,20 @@
   </entry>
   
   <entry>
-    <title>Pytorch 基本操作</title>
-    <link href="http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/"/>
-    <id>http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/</id>
+    <title>支持向量机</title>
+    <link href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/"/>
+    <id>http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/</id>
     <published>2022-01-10T15:30:41.000Z</published>
-    <updated>2022-05-08T17:14:44.623Z</updated>
+    <updated>2022-07-23T10:09:16.632Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;1-张量创建&quot;&gt;&lt;a href=&quot;#1-张量创建&quot; class=&quot;headerlink&quot; title=&quot;1. 张量创建&quot;&gt;&lt;/a&gt;1. 张量创建&lt;/h3&gt;&lt;p&gt;使用torch.tensor创建张量可以设置创建的张量默认数据类型&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;torch.set_default_tensor_type(torch.FloatTensor)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;创建不同维度的张量&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# dim = 0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = torch.tensor(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# dim = 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b = torch.tensor([&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;c = torch.FloatTensor(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# dim = 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;d = torch.FloatTensor(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;支持向量机（SVM）&quot;&gt;&lt;a href=&quot;#支持向量机（SVM）&quot; class=&quot;headerlink&quot; title=&quot;支持向量机（SVM）&quot;&gt;&lt;/a&gt;支持向量机（SVM）&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;支持向量机（Support Vector Machine, SVM）是一类按监督学习（supervised learning）方式对数据进行二元分类的广义线性分类器（generalized linear classifier），其决策边界是对学习样本求解的最大边距超平面（maximum-margin hyperplane）。&lt;/p&gt;
+&lt;h2 id=&quot;非线性SVM优化问题&quot;&gt;&lt;a href=&quot;#非线性SVM优化问题&quot; class=&quot;headerlink&quot; title=&quot;非线性SVM优化问题&quot;&gt;&lt;/a&gt;非线性SVM优化问题&lt;/h2&gt;&lt;p&gt;最小化：&lt;/p&gt;</summary>
     
     
     
-    <category term="深度学习笔记" scheme="http://wenyisir.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="机器学习" scheme="http://wenyisir.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-    
-    <category term="Pytorch" scheme="http://wenyisir.github.io/tags/Pytorch/"/>
     
   </entry>
   
@@ -205,20 +201,24 @@
   </entry>
   
   <entry>
-    <title>支持向量机</title>
-    <link href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/"/>
-    <id>http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/</id>
+    <title>Pytorch 基本操作</title>
+    <link href="http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/"/>
+    <id>http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/</id>
     <published>2022-01-10T15:30:41.000Z</published>
-    <updated>2022-07-23T10:09:16.632Z</updated>
+    <updated>2022-05-08T17:14:44.623Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;支持向量机（SVM）&quot;&gt;&lt;a href=&quot;#支持向量机（SVM）&quot; class=&quot;headerlink&quot; title=&quot;支持向量机（SVM）&quot;&gt;&lt;/a&gt;支持向量机（SVM）&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;支持向量机（Support Vector Machine, SVM）是一类按监督学习（supervised learning）方式对数据进行二元分类的广义线性分类器（generalized linear classifier），其决策边界是对学习样本求解的最大边距超平面（maximum-margin hyperplane）。&lt;/p&gt;
-&lt;h2 id=&quot;非线性SVM优化问题&quot;&gt;&lt;a href=&quot;#非线性SVM优化问题&quot; class=&quot;headerlink&quot; title=&quot;非线性SVM优化问题&quot;&gt;&lt;/a&gt;非线性SVM优化问题&lt;/h2&gt;&lt;p&gt;最小化：&lt;/p&gt;</summary>
+    <summary type="html">&lt;h3 id=&quot;1-张量创建&quot;&gt;&lt;a href=&quot;#1-张量创建&quot; class=&quot;headerlink&quot; title=&quot;1. 张量创建&quot;&gt;&lt;/a&gt;1. 张量创建&lt;/h3&gt;&lt;p&gt;使用torch.tensor创建张量可以设置创建的张量默认数据类型&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;torch.set_default_tensor_type(torch.FloatTensor)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;创建不同维度的张量&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# dim = 0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = torch.tensor(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# dim = 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b = torch.tensor([&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;c = torch.FloatTensor(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# dim = 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;d = torch.FloatTensor(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
-    <category term="机器学习" scheme="http://wenyisir.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习笔记" scheme="http://wenyisir.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
+    
+    <category term="Pytorch" scheme="http://wenyisir.github.io/tags/Pytorch/"/>
     
   </entry>
   

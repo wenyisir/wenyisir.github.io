@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2022-04-26T13:24:02.096Z</updated>
+  <updated>2022-07-24T10:59:42.494Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日一题</title>
+    <link href="http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    <id>http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</id>
+    <published>2022-05-08T13:27:41.000Z</published>
+    <updated>2022-07-24T10:59:42.494Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;中值定理部分&quot;&gt;&lt;a href=&quot;#中值定理部分&quot; class=&quot;headerlink&quot; title=&quot;中值定理部分&quot;&gt;&lt;/a&gt;中值定理部分&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;2022.5.8&lt;/p&gt;
+&lt;p&gt;设 $f(x)$ 在 $[a,b]$ 连续，在 $(a,b)$ 可导，且 $f(a)=f(b)=0$ ，证明：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;存在 $\xi\in(a,b)$，$f’(\xi)+f(\xi)=0$&lt;/li&gt;
+&lt;li&gt;存在 $\eta\in(a,b)$，$f’(\eta)-f(\eta)=0$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;2022.5.9&lt;ol&gt;
+&lt;li&gt;设 $f(x)$ 在 $[0,a]$ 上连续，在 $(0,a)$ 内可导，且 $f(a)=0$，证明: 存在一点 $\xi∈(0,a)$，使得 $f(\xi)+\xi f’(\xi)=0$.&lt;/li&gt;
+&lt;li&gt;设 $f(x)$ 在 $[0,a]$ 上连续，在 $(0,a)$ 内可导，且 $f(a)=0$，证明: 存在一点 $\xi∈(0,a)$，使得 $nf(\xi)+\xi f’(\xi)=0$.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;2022.5.10&lt;/p&gt;
+&lt;p&gt;已知函数 $f(x)$ 具有二阶导数，且 $\lim\limits_{x\rightarrow0} \frac{f(x)}{x}=0$，$f(1)=0$  试证：在区间 $(0,1)$ 内至少&lt;br&gt;存在一点$\xi$，使得$f’’(\xi)$=0.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;2022.5.11&lt;/p&gt;
+&lt;p&gt;已知函数 $f(x)$ 在 $[0,1]$ 连续，$(0,1)$ 可微，$f(0)=f(1)=0$，$f(\frac{1}{2})=1$&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;证明：存在 $\xi \in (\frac{1}{2},1)$，$f(\xi) = \xi$&lt;/li&gt;
+&lt;li&gt;存在 $\eta\in(0,\xi)$，$f’(\eta)=f(\eta)-\eta+1$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="每日一题" scheme="http://wenyisir.github.io/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>输入输出接口</title>
@@ -50,11 +96,11 @@
     <link href="http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/"/>
     <id>http://wenyisir.github.io/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/</id>
     <published>2022-04-25T12:45:27.000Z</published>
-    <updated>2022-04-25T14:06:46.051Z</updated>
+    <updated>2022-07-23T10:11:22.557Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;定时-技术技术和中断技术&quot;&gt;&lt;a href=&quot;#定时-技术技术和中断技术&quot; class=&quot;headerlink&quot; title=&quot;定时/技术技术和中断技术&quot;&gt;&lt;/a&gt;定时/技术技术和中断技术&lt;/h1&gt;&lt;h2 id=&quot;定时-计数技术&quot;&gt;&lt;a href=&quot;#定时-计数技术&quot; class=&quot;headerlink&quot; title=&quot;定时/计数技术&quot;&gt;&lt;/a&gt;定时/计数技术&lt;/h2&gt;&lt;p&gt;定时/计数器接收信号源发送来的计数信号，到达约定的计数时，发出完成计数的信号。Intel系列的定时/计数器为8253和8254。&lt;/p&gt;
-&lt;h3 id=&quot;8254的内部逻辑结构&quot;&gt;&lt;a href=&quot;#8254的内部逻辑结构&quot; class=&quot;headerlink&quot; title=&quot;8254的内部逻辑结构&quot;&gt;&lt;/a&gt;8254的内部逻辑结构&lt;/h3&gt;&lt;p&gt;8254有三个完全相同的计数器，可以同时进行三组计数。8254是可编程接口，可以有多种工作方式，&lt;strong&gt;工作之前需要进行初始化&lt;/strong&gt;。控制字寄存器用来保存初始化时的控制字；数据总线缓冲器用于将8254与系统数据总线$D_0$~$D_7$相连。读写控制逻辑接收CPU发来的读写信号和地址信号，来确定数据传输的方向是读出还是写入，并且选择所操作的寄存器。&lt;img src=&quot;/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220425201128212.png&quot; alt=&quot;image-20220425201128212&quot;&gt;&lt;/p&gt;</summary>
+&lt;h3 id=&quot;8254的内部逻辑结构&quot;&gt;&lt;a href=&quot;#8254的内部逻辑结构&quot; class=&quot;headerlink&quot; title=&quot;8254的内部逻辑结构&quot;&gt;&lt;/a&gt;8254的内部逻辑结构&lt;/h3&gt;&lt;p&gt;8254有三个完全相同的计数器，可以同时进行三组计数。8254是可编程接口，可以有多种工作方式，&lt;strong&gt;工作之前需要进行初始化&lt;/strong&gt;。控制字寄存器用来保存初始化时的控制字；数据总线缓冲器用于将8254与系统数据总线$D_0$~$D_7$相连。读写控制逻辑接收CPU发来的读写信号和地址信号，来确定数据传输的方向是读出还是写入，并且选择所操作的寄存器。&lt;img src=&quot;/2022/04/25/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD/image-20220425201128212.png&quot; alt=&quot;image-20220425201128212&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -87,21 +133,43 @@
   </entry>
   
   <entry>
-    <title>线性回归</title>
+    <title>Pytorch 基本操作</title>
+    <link href="http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/"/>
+    <id>http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/</id>
+    <published>2022-01-10T15:30:41.000Z</published>
+    <updated>2022-05-08T17:14:44.623Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-张量创建&quot;&gt;&lt;a href=&quot;#1-张量创建&quot; class=&quot;headerlink&quot; title=&quot;1. 张量创建&quot;&gt;&lt;/a&gt;1. 张量创建&lt;/h3&gt;&lt;p&gt;使用torch.tensor创建张量可以设置创建的张量默认数据类型&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;torch.set_default_tensor_type(torch.FloatTensor)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;创建不同维度的张量&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# dim = 0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = torch.tensor(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# dim = 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b = torch.tensor([&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;c = torch.FloatTensor(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# dim = 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;d = torch.FloatTensor(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="深度学习笔记" scheme="http://wenyisir.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Pytorch" scheme="http://wenyisir.github.io/tags/Pytorch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线性回归实战</title>
     <link href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linear_regression/"/>
     <id>http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linear_regression/</id>
     <published>2022-01-10T15:30:41.000Z</published>
-    <updated>2022-03-11T06:42:12.167Z</updated>
+    <updated>2022-07-23T10:04:47.772Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;任务描述&quot;&gt;&lt;a href=&quot;#任务描述&quot; class=&quot;headerlink&quot; title=&quot;任务描述&quot;&gt;&lt;/a&gt;任务描述&lt;/h3&gt;&lt;ul&gt;
+    <summary type="html">&lt;h1 id=&quot;任务描述&quot;&gt;&lt;a href=&quot;#任务描述&quot; class=&quot;headerlink&quot; title=&quot;任务描述&quot;&gt;&lt;/a&gt;任务描述&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;COVID-19 daily cases prediction&lt;/li&gt;
 &lt;li&gt;Training data: 2700 samples&lt;/li&gt;
 &lt;li&gt;Testing data: 893 samples&lt;/li&gt;
 &lt;li&gt;Evaluation metric: Root Mean Squared Error (RMSE)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;使用数据集[&lt;a href=&quot;https://www.kaggle.com/c/ml2021spring-hw1/data&quot;&gt;https://www.kaggle.com/c/ml2021spring-hw1/data&lt;/a&gt;]&lt;/p&gt;
-&lt;h3 id=&quot;使用线性模型评估感染率&quot;&gt;&lt;a href=&quot;#使用线性模型评估感染率&quot; class=&quot;headerlink&quot; title=&quot;使用线性模型评估感染率&quot;&gt;&lt;/a&gt;使用线性模型评估感染率&lt;/h3&gt;&lt;h4 id=&quot;代价函数&quot;&gt;&lt;a href=&quot;#代价函数&quot; class=&quot;headerlink&quot; title=&quot;代价函数&quot;&gt;&lt;/a&gt;代价函数&lt;/h4&gt;</summary>
+&lt;h2 id=&quot;使用线性模型评估感染率&quot;&gt;&lt;a href=&quot;#使用线性模型评估感染率&quot; class=&quot;headerlink&quot; title=&quot;使用线性模型评估感染率&quot;&gt;&lt;/a&gt;使用线性模型评估感染率&lt;/h2&gt;&lt;h3 id=&quot;代价函数&quot;&gt;&lt;a href=&quot;#代价函数&quot; class=&quot;headerlink&quot; title=&quot;代价函数&quot;&gt;&lt;/a&gt;代价函数&lt;/h3&gt;</summary>
     
     
     
@@ -111,31 +179,29 @@
   </entry>
   
   <entry>
-    <title>数据操作</title>
-    <link href="http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/"/>
-    <id>http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/</id>
+    <title>支持向量机</title>
+    <link href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/"/>
+    <id>http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/</id>
     <published>2022-01-10T15:30:41.000Z</published>
-    <updated>2022-02-17T10:47:12.143Z</updated>
+    <updated>2022-07-23T10:09:16.632Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;1-张量创建&quot;&gt;&lt;a href=&quot;#1-张量创建&quot; class=&quot;headerlink&quot; title=&quot;1. 张量创建&quot;&gt;&lt;/a&gt;1. 张量创建&lt;/h3&gt;&lt;p&gt;使用arrange创建一个行向量x。这个行向量包含0开始的前12个整数，默认为浮点数&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;x = torch.arange(&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;可以通过张量的shape属性来访问形状&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;x.shape&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;支持向量机（SVM）&quot;&gt;&lt;a href=&quot;#支持向量机（SVM）&quot; class=&quot;headerlink&quot; title=&quot;支持向量机（SVM）&quot;&gt;&lt;/a&gt;支持向量机（SVM）&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;支持向量机（Support Vector Machine, SVM）是一类按监督学习（supervised learning）方式对数据进行二元分类的广义线性分类器（generalized linear classifier），其决策边界是对学习样本求解的最大边距超平面（maximum-margin hyperplane）。&lt;/p&gt;
+&lt;h2 id=&quot;非线性SVM优化问题&quot;&gt;&lt;a href=&quot;#非线性SVM优化问题&quot; class=&quot;headerlink&quot; title=&quot;非线性SVM优化问题&quot;&gt;&lt;/a&gt;非线性SVM优化问题&lt;/h2&gt;&lt;p&gt;最小化：&lt;/p&gt;</summary>
     
     
     
-    <category term="深度学习笔记" scheme="http://wenyisir.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="机器学习" scheme="http://wenyisir.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
   </entry>
   
   <entry>
     <title>Git 的基本使用方法</title>
-    <link href="http://wenyisir.github.io/2022/01/09/Linux%E7%AC%94%E8%AE%B0/Git/"/>
-    <id>http://wenyisir.github.io/2022/01/09/Linux%E7%AC%94%E8%AE%B0/Git/</id>
+    <link href="http://wenyisir.github.io/2022/01/09/git%E7%AC%94%E8%AE%B0/Git/"/>
+    <id>http://wenyisir.github.io/2022/01/09/git%E7%AC%94%E8%AE%B0/Git/</id>
     <published>2022-01-09T09:05:04.000Z</published>
-    <updated>2022-02-17T11:00:30.288Z</updated>
+    <updated>2022-07-23T10:18:44.159Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;1-Git-结构&quot;&gt;&lt;a href=&quot;#1-Git-结构&quot; class=&quot;headerlink&quot; title=&quot;1. Git 结构&quot;&gt;&lt;/a&gt;1. Git 结构&lt;/h3&gt;&lt;ul&gt;
@@ -188,8 +254,6 @@
     
     <category term="Linux笔记" scheme="http://wenyisir.github.io/categories/Linux%E7%AC%94%E8%AE%B0/"/>
     
-    
-    <category term="Linux" scheme="http://wenyisir.github.io/tags/Linux/"/>
     
   </entry>
   

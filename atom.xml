@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2022-07-24T14:41:03.997Z</updated>
+  <updated>2022-09-02T08:27:04.553Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -17,11 +17,99 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux常用命令</title>
+    <link href="http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-09-02T09:05:04.000Z</published>
+    <updated>2022-09-02T08:27:04.553Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Linux笔记" scheme="http://wenyisir.github.io/categories/Linux%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tmux使用</title>
+    <link href="http://wenyisir.github.io/2022/09/02/Linux/tmux/"/>
+    <id>http://wenyisir.github.io/2022/09/02/Linux/tmux/</id>
+    <published>2022-09-02T09:05:04.000Z</published>
+    <updated>2022-09-02T08:50:12.389Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;tmux&lt;/strong&gt; 是指通过一个终端登录远程主机并运行后，在其中可以开启多个控制台的终端复用软件。&lt;/p&gt;
+&lt;h2 id=&quot;单元模块&quot;&gt;&lt;a href=&quot;#单元模块&quot; class=&quot;headerlink&quot; title=&quot;单元模块&quot;&gt;&lt;/a&gt;单元模块&lt;/h2&gt;&lt;div class=&quot;table-container&quot;&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;结构&lt;/th&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;server&lt;/td&gt;
+&lt;td&gt;服务器。输入tmux命令时就开启了一个服务器。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;session&lt;/td&gt;
+&lt;td&gt;会话。一个服务器可以包含多个会话。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;window&lt;/td&gt;
+&lt;td&gt;窗口。一个会话可以包含多个窗口。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;panel&lt;/td&gt;
+&lt;td&gt;面板。一个窗口可以包含多个面板。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;操作&quot;&gt;&lt;a href=&quot;#操作&quot; class=&quot;headerlink&quot; title=&quot;操作&quot;&gt;&lt;/a&gt;操作&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="Linux笔记" scheme="http://wenyisir.github.io/categories/Linux%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wenyisir.github.io/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://wenyisir.github.io/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/</id>
+    <published>2022-07-25T07:34:48.059Z</published>
+    <updated>2022-07-25T16:10:18.268Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725153727263.png&quot; alt=&quot;image-20220725153727263&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725154249125.png&quot; alt=&quot;image-20220725154249125&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725161532302.png&quot; alt=&quot;image-20220725161532302&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725163609518.png&quot; alt=&quot;image-20220725163609518&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725170013788.png&quot; alt=&quot;image-20220725170013788&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>七月部分</title>
     <link href="http://wenyisir.github.io/2022/07/22/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%B8%83%E6%9C%88/"/>
     <id>http://wenyisir.github.io/2022/07/22/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%B8%83%E6%9C%88/</id>
     <published>2022-07-22T12:15:13.000Z</published>
-    <updated>2022-07-24T14:41:03.997Z</updated>
+    <updated>2022-07-25T07:32:56.594Z</updated>
     
     
       
@@ -224,8 +312,8 @@
   
   <entry>
     <title>Git 的基本使用方法</title>
-    <link href="http://wenyisir.github.io/2022/01/09/git%E7%AC%94%E8%AE%B0/Git/"/>
-    <id>http://wenyisir.github.io/2022/01/09/git%E7%AC%94%E8%AE%B0/Git/</id>
+    <link href="http://wenyisir.github.io/2022/01/09/Linux/Git/"/>
+    <id>http://wenyisir.github.io/2022/01/09/Linux/Git/</id>
     <published>2022-01-09T09:05:04.000Z</published>
     <updated>2022-07-23T10:18:44.159Z</updated>
     

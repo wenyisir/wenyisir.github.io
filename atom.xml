@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2022-09-02T08:27:04.553Z</updated>
+  <updated>2022-09-06T07:51:13.573Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -17,18 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vim使用</title>
+    <link href="http://wenyisir.github.io/2022/09/06/Linux/vim/"/>
+    <id>http://wenyisir.github.io/2022/09/06/Linux/vim/</id>
+    <published>2022-09-06T07:37:50.000Z</published>
+    <updated>2022-09-06T07:51:13.573Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;功能：&quot;&gt;&lt;a href=&quot;#功能：&quot; class=&quot;headerlink&quot; title=&quot;功能：&quot;&gt;&lt;/a&gt;功能：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;命令行模式下的文本编辑器。&lt;/li&gt;
+&lt;li&gt;根据文件扩展名自动判别编程语言。支持代码缩进、代码高亮等功能。&lt;/li&gt;
+&lt;li&gt;使用方式：vim filename&lt;br&gt;如果已有该文件，则打开它。&lt;br&gt;如果没有该文件，则打开个一个新的文件，并命名为filename&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;模式：&quot;&gt;&lt;a href=&quot;#模式：&quot; class=&quot;headerlink&quot; title=&quot;模式：&quot;&gt;&lt;/a&gt;模式：&lt;/h2&gt;&lt;p&gt;vim编辑器有三种模式：&lt;strong&gt;命令模式、编辑模式、命令行模式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;模式间切换方法：&lt;br&gt;（1）命令模式下，输入&lt;code&gt;：&lt;/code&gt;后，进入末行模式&lt;br&gt;（2）命令模式下，按下&lt;code&gt;i&lt;/code&gt;、&lt;code&gt;a&lt;/code&gt;等键，可以计入编辑模式&lt;br&gt;（3）编辑模式下，按下&lt;code&gt;esc&lt;/code&gt;，可以回到命令模式&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux笔记" scheme="http://wenyisir.github.io/categories/Linux%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Linux常用命令</title>
     <link href="http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
     <published>2022-09-02T09:05:04.000Z</published>
-    <updated>2022-09-02T08:27:04.553Z</updated>
+    <updated>2022-09-06T07:24:07.445Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+    <summary type="html">&lt;h2 id=&quot;Linux基本命令&quot;&gt;&lt;a href=&quot;#Linux基本命令&quot; class=&quot;headerlink&quot; title=&quot;Linux基本命令&quot;&gt;&lt;/a&gt;Linux基本命令&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
         
       
     
@@ -44,7 +67,7 @@
     <link href="http://wenyisir.github.io/2022/09/02/Linux/tmux/"/>
     <id>http://wenyisir.github.io/2022/09/02/Linux/tmux/</id>
     <published>2022-09-02T09:05:04.000Z</published>
-    <updated>2022-09-02T08:50:12.389Z</updated>
+    <updated>2022-09-06T07:36:53.887Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;tmux&lt;/strong&gt; 是指通过一个终端登录远程主机并运行后，在其中可以开启多个控制台的终端复用软件。&lt;/p&gt;
@@ -81,25 +104,6 @@
     
     
     <category term="Linux笔记" scheme="http://wenyisir.github.io/categories/Linux%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wenyisir.github.io/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/"/>
-    <id>http://wenyisir.github.io/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/</id>
-    <published>2022-07-25T07:34:48.059Z</published>
-    <updated>2022-07-25T16:10:18.268Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725153727263.png&quot; alt=&quot;image-20220725153727263&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725154249125.png&quot; alt=&quot;image-20220725154249125&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725161532302.png&quot; alt=&quot;image-20220725161532302&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725163609518.png&quot; alt=&quot;image-20220725163609518&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725170013788.png&quot; alt=&quot;image-20220725170013788&quot;&gt;&lt;/p&gt;</summary>
-    
-    
     
     
   </entry>

@@ -162,6 +162,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/09/06/Linux/vim/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="wenyi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="文溢の博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/06/Linux/vim/" class="post-title-link" itemprop="url">vim使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-09-06 15:37:50 / 修改时间：15:51:13" itemprop="dateCreated datePublished" datetime="2022-09-06T15:37:50+08:00">2022-09-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">Linux笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h2><ul>
+<li>命令行模式下的文本编辑器。</li>
+<li>根据文件扩展名自动判别编程语言。支持代码缩进、代码高亮等功能。</li>
+<li>使用方式：vim filename<br>如果已有该文件，则打开它。<br>如果没有该文件，则打开个一个新的文件，并命名为filename</li>
+</ul>
+<h2 id="模式："><a href="#模式：" class="headerlink" title="模式："></a>模式：</h2><p>vim编辑器有三种模式：<strong>命令模式、编辑模式、命令行模式</strong></p>
+<p>模式间切换方法：<br>（1）命令模式下，输入<code>：</code>后，进入末行模式<br>（2）命令模式下，按下<code>i</code>、<code>a</code>等键，可以计入编辑模式<br>（3）编辑模式下，按下<code>esc</code>，可以回到命令模式</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/06/Linux/vim/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -185,10 +266,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-09-02 17:05:04 / 修改时间：16:27:04" itemprop="dateCreated datePublished" datetime="2022-09-02T17:05:04+08:00">2022-09-02</time>
+              <time title="创建时间：2022-09-02 17:05:04" itemprop="dateCreated datePublished" datetime="2022-09-02T17:05:04+08:00">2022-09-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-06 15:24:07" itemprop="dateModified" datetime="2022-09-06T15:24:07+08:00">2022-09-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -210,7 +297,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">(1) ctrl c: 取消命令，并且换行</span><br><span class="line">(2) ctrl u: 清空本行命令</span><br><span class="line">(3) tab键：可以补全命令和文件名，如果补全不了快速按两下tab键，可以显示备选选项</span><br><span class="line">(4) ls: 列出当前目录下所有文件，蓝色的是文件夹，白色的是普通文件，绿色的是可执行文件</span><br><span class="line">(5) pwd: 显示当前路径</span><br><span class="line">(6) cd XXX: 进入XXX目录下, cd .. 返回上层目录</span><br><span class="line">(7) cp XXX YYY: 将XXX文件复制成YYY，XXX和YYY可以是一个路径，比如../dir_c/a.txt，表示上层目录下的dir_c文件夹下的文件a.txt</span><br><span class="line">(8) mkdir XXX: 创建目录XXX</span><br><span class="line">(9) rm XXX: 删除普通文件;  rm XXX -r: 删除文件夹</span><br><span class="line">(10) mv XXX YYY: 将XXX文件移动到YYY，和cp命令一样，XXX和YYY可以是一个路径；重命名也是用这个命令</span><br><span class="line">(11) touch XXX: 创建一个文件</span><br><span class="line">(12) cat XXX: 展示文件XXX中的内容</span><br><span class="line">(13) 复制文本</span><br><span class="line">    windows/Linux下：Ctrl + insert，Mac下：command + c</span><br><span class="line">(14) 粘贴文本</span><br><span class="line">    windows/Linux下：Shift + insert，Mac下：command + v</span><br></pre></td></tr></table></figure>
+          <h2 id="Linux基本命令"><a href="#Linux基本命令" class="headerlink" title="Linux基本命令"></a>Linux基本命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">(1) ctrl c: 取消命令，并且换行</span><br><span class="line">(2) ctrl u: 清空本行命令</span><br><span class="line">(3) tab键：可以补全命令和文件名，如果补全不了快速按两下tab键，可以显示备选选项</span><br><span class="line">(4) ls: 列出当前目录下所有文件，蓝色的是文件夹，白色的是普通文件，绿色的是可执行文件</span><br><span class="line">(5) pwd: 显示当前路径</span><br><span class="line">(6) cd XXX: 进入XXX目录下, cd .. 返回上层目录</span><br><span class="line">(7) cp XXX YYY: 将XXX文件复制成YYY，XXX和YYY可以是一个路径，比如../dir_c/a.txt，表示上层目录下的dir_c文件夹下的文件a.txt</span><br><span class="line">(8) mkdir XXX: 创建目录XXX</span><br><span class="line">(9) rm XXX: 删除普通文件;  rm XXX -r: 删除文件夹</span><br><span class="line">(10) mv XXX YYY: 将XXX文件移动到YYY，和cp命令一样，XXX和YYY可以是一个路径；重命名也是用这个命令</span><br><span class="line">(11) touch XXX: 创建一个文件</span><br><span class="line">(12) cat XXX: 展示文件XXX中的内容</span><br><span class="line">(13) 复制文本</span><br><span class="line">    windows/Linux下：Ctrl + insert，Mac下：command + c</span><br><span class="line">(14) 粘贴文本</span><br><span class="line">    windows/Linux下：Shift + insert，Mac下：command + v</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -253,10 +340,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-09-02 17:05:04 / 修改时间：16:50:12" itemprop="dateCreated datePublished" datetime="2022-09-02T17:05:04+08:00">2022-09-02</time>
+              <time title="创建时间：2022-09-02 17:05:04" itemprop="dateCreated datePublished" datetime="2022-09-02T17:05:04+08:00">2022-09-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-06 15:36:53" itemprop="dateModified" datetime="2022-09-06T15:36:53+08:00">2022-09-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -311,82 +404,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/09/02/Linux/tmux/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="wenyi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="文溢の博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-07-25 15:34:48" itemprop="dateCreated datePublished" datetime="2022-07-25T15:34:48+08:00">2022-07-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-26 00:10:18" itemprop="dateModified" datetime="2022-07-26T00:10:18+08:00">2022-07-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725153727263.png" alt="image-20220725153727263"></p>
-<p><img src="/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725154249125.png" alt="image-20220725154249125"></p>
-<p><img src="/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725161532302.png" alt="image-20220725161532302"></p>
-<p><img src="/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725163609518.png" alt="image-20220725163609518"></p>
-<p><img src="/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/Users\46581\AppData\Roaming\Typora\typora-user-images\image-20220725170013788.png" alt="image-20220725170013788"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

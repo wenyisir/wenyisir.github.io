@@ -28,7 +28,7 @@
 <meta property="og:description" content="介绍tmux 是指通过一个终端登录远程主机并运行后，在其中可以开启多个控制台的终端复用软件。 单元模块    结构 功能     server 服务器。输入tmux命令时就开启了一个服务器。   session 会话。一个服务器可以包含多个会话。   window 窗口。一个会话可以包含多个窗口。   panel 面板。一个窗口可以包含多个面板。     操作">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-02T09:05:04.000Z">
-<meta property="article:modified_time" content="2022-09-02T08:50:12.389Z">
+<meta property="article:modified_time" content="2022-09-06T07:36:53.887Z">
 <meta property="article:author" content="wenyi">
 <meta name="twitter:card" content="summary">
 
@@ -189,10 +189,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-09-02 17:05:04 / 修改时间：16:50:12" itemprop="dateCreated datePublished" datetime="2022-09-02T17:05:04+08:00">2022-09-02</time>
+              <time title="创建时间：2022-09-02 17:05:04" itemprop="dateCreated datePublished" datetime="2022-09-02T17:05:04+08:00">2022-09-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-06 15:36:53" itemprop="dateModified" datetime="2022-09-06T15:36:53+08:00">2022-09-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -244,23 +250,36 @@
 </table>
 </div>
 <h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ol>
-<li>tmux：新建一个session，其中包含一个window，window中包含一个pane，pane里打开了一个shell对话框。</li>
-<li>按下Ctrl + b后手指松开，然后按%：将当前pane左右平分成两个pane。<br>按下Ctrl + b后手指松开，然后按”（注意是双引号”）：将当前pane上下平分成两个pane。</li>
-<li>Ctrl + d：关闭当前pane；如果当前window的所有pane均已关闭，则自动关闭window；如果当前session的所有window均已关闭，则自动关闭session。</li>
-<li>按下ctrl + b后手指松开，然后按方向键：选择相邻的pane。    </li>
-<li>按住ctrl + b的同时按方向键，可以调整pane之间分割线的位置。</li>
-<li>按下ctrl + b后手指松开，然后按z：将当前pane全屏/取消全屏。</li>
-<li>按下ctrl + b后手指松开，然后按d：挂起当前session。</li>
-<li>tmux a：打开之前挂起的session。 </li>
-<li>按下ctrl + b后手指松开，然后按s：选择其它session。<br>方向键 —— 上：选择上一项 session/window/pane<br>方向键 —— 下：选择下一项 session/window/pane<br>方向键 —— 右：展开当前项 session/window<br>方向键 —— 左：闭合当前项 session/window    </li>
-<li>按下Ctrl + b后手指松开，然后按c：在当前session中创建一个新的window。</li>
-<li>按下Ctrl + b后手指松开，然后按w：选择其他window，操作方法与(9)完全相同。</li>
-<li>按下Ctrl + b后手指松开，然后按PageUp：翻阅当前pane内的内容。</li>
-<li>在tmux中选中文本时，需要按住shift键。（仅支持Windows和Linux，不支持Mac，不过该操作并不是必须的，因此影响不大）</li>
-<li>tmux中复制/粘贴文本的通用方式：<pre><code>   (1) 按下Ctrl + b后松开手指，然后按[
-   (2) 用鼠标选中文本，被选中的文本会被自动复制到tmux的剪贴板
-   (3) 按下Ctrl + b后松开手指，然后按]，会将剪贴板中的内容粘贴到光标处
-</code></pre></li>
+<li><p>tmux：新建一个session，其中包含一个window，window中包含一个pane，pane里打开了一个shell对话框。</p>
+</li>
+<li><p>按下Ctrl + b后手指松开，然后按%：将当前pane左右平分成两个pane。<br>按下Ctrl + b后手指松开，然后按”（注意是双引号”）：将当前pane上下平分成两个pane。</p>
+</li>
+<li><p>Ctrl + d：关闭当前pane；如果当前window的所有pane均已关闭，则自动关闭window；如果当前session的所有window均已关闭，则自动关闭session。</p>
+</li>
+<li><p>按下ctrl + b后手指松开，然后按方向键：选择相邻的pane。    </p>
+</li>
+<li><p>按住ctrl + b的同时按方向键，可以调整pane之间分割线的位置。</p>
+</li>
+<li><p>按下ctrl + b后手指松开，然后按z：将当前pane全屏/取消全屏。</p>
+</li>
+<li><p>按下ctrl + b后手指松开，然后按d：挂起当前session。</p>
+</li>
+<li><p>tmux a：打开之前挂起的session。 </p>
+</li>
+<li><p>按下ctrl + b后手指松开，然后按s：选择其它session。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方向键 —— 上：选择上一项 session/window/pane</span><br><span class="line">方向键 —— 下：选择下一项 session/window/pane</span><br><span class="line">方向键 —— 右：展开当前项 session/window</span><br><span class="line">方向键 —— 左：闭合当前项 session/window  </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按下Ctrl + b后手指松开，然后按c：在当前session中创建一个新的window。</p>
+</li>
+<li><p>按下Ctrl + b后手指松开，然后按w：选择其他window，操作方法与(9)完全相同。</p>
+</li>
+<li><p>按下Ctrl + b后手指松开，然后按PageUp：翻阅当前pane内的内容。</p>
+</li>
+<li><p>在tmux中选中文本时，需要按住shift键。（仅支持Windows和Linux，不支持Mac，不过该操作并不是必须的，因此影响不大）</p>
+</li>
+<li><p>tmux中复制/粘贴文本的通用方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(1) 按下Ctrl + b后松开手指，然后按[</span><br><span class="line">(2) 用鼠标选中文本，被选中的文本会被自动复制到tmux的剪贴板</span><br><span class="line">(3) 按下Ctrl + b后松开手指，然后按]，会将剪贴板中的内容粘贴到光标处</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 
     </div>
@@ -326,8 +345,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/07/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B/" rel="prev" title="">
-      <i class="fa fa-chevron-left"></i> 
+    <a href="/2022/07/22/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%B8%83%E6%9C%88/" rel="prev" title="七月部分">
+      <i class="fa fa-chevron-left"></i> 七月部分
     </a></div>
       <div class="post-nav-item">
     <a href="/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="next" title="Linux常用命令">

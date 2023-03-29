@@ -162,6 +162,83 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2023/03/29/Leetcode%E5%91%A8%E8%B5%9B/%E7%AC%AC%20338%20%E5%9C%BA%E5%91%A8%E8%B5%9B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="wenyi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="文溢の博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/29/Leetcode%E5%91%A8%E8%B5%9B/%E7%AC%AC%20338%20%E5%9C%BA%E5%91%A8%E8%B5%9B/" class="post-title-link" itemprop="url">第 338 场周赛</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-29 16:31:08 / 修改时间：16:52:20" itemprop="dateCreated datePublished" datetime="2023-03-29T16:31:08+08:00">2023-03-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode%E5%91%A8%E8%B5%9B/" itemprop="url" rel="index"><span itemprop="name">Leetcode周赛</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="第-338-场周赛-题解"><a href="#第-338-场周赛-题解" class="headerlink" title="第 338 场周赛 题解"></a>第 338 场周赛 题解</h2><h3 id="K-件物品的最大和"><a href="#K-件物品的最大和" class="headerlink" title="K 件物品的最大和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/k-items-with-the-maximum-sum/">K 件物品的最大和</a></h3><p>贪心，直接按照1，0，-1选即可</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">kItemsWithMaximumSum</span><span class="params">(<span class="keyword">int</span> numOnes, <span class="keyword">int</span> numZeros, <span class="keyword">int</span> numNegOnes, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(k&lt;=numOnes) <span class="keyword">return</span> k;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(numOnes+numZeros&gt;=k) <span class="keyword">return</span> numOnes;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> numOnes - (k - numOnes - numZeros);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="质数减法运算"><a href="#质数减法运算" class="headerlink" title="质数减法运算"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/prime-subtraction-operation/">质数减法运算</a></h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/03/29/Leetcode%E5%91%A8%E8%B5%9B/%E7%AC%AC%20338%20%E5%9C%BA%E5%91%A8%E8%B5%9B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/09/06/Linux/vim/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -176,7 +253,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/06/Linux/vim/" class="post-title-link" itemprop="url">vim使用</a>
+            <a href="/2022/09/06/Linux/vim/" class="post-title-link" itemprop="url">Vim使用</a>
         </h2>
 
         <div class="post-meta">
@@ -185,10 +262,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-09-06 15:37:50 / 修改时间：15:51:13" itemprop="dateCreated datePublished" datetime="2022-09-06T15:37:50+08:00">2022-09-06</time>
+              <time title="创建时间：2022-09-06 15:37:50" itemprop="dateCreated datePublished" datetime="2022-09-06T15:37:50+08:00">2022-09-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-07 17:24:06" itemprop="dateModified" datetime="2022-09-07T17:24:06+08:00">2022-09-07</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -215,8 +298,6 @@
 <li>根据文件扩展名自动判别编程语言。支持代码缩进、代码高亮等功能。</li>
 <li>使用方式：vim filename<br>如果已有该文件，则打开它。<br>如果没有该文件，则打开个一个新的文件，并命名为filename</li>
 </ul>
-<h2 id="模式："><a href="#模式：" class="headerlink" title="模式："></a>模式：</h2><p>vim编辑器有三种模式：<strong>命令模式、编辑模式、命令行模式</strong></p>
-<p>模式间切换方法：<br>（1）命令模式下，输入<code>：</code>后，进入末行模式<br>（2）命令模式下，按下<code>i</code>、<code>a</code>等键，可以计入编辑模式<br>（3）编辑模式下，按下<code>esc</code>，可以回到命令模式</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/09/06/Linux/vim/#more" rel="contents">
@@ -331,7 +412,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/02/Linux/tmux/" class="post-title-link" itemprop="url">tmux使用</a>
+            <a href="/2022/09/02/Linux/tmux/" class="post-title-link" itemprop="url">Tmux使用</a>
         </h2>
 
         <div class="post-meta">
@@ -348,7 +429,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-06 15:36:53" itemprop="dateModified" datetime="2022-09-06T15:36:53+08:00">2022-09-06</time>
+                <time title="修改时间：2022-09-06 15:57:57" itemprop="dateModified" datetime="2022-09-06T15:57:57+08:00">2022-09-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -400,7 +481,6 @@
 </tbody>
 </table>
 </div>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/09/02/Linux/tmux/#more" rel="contents">
@@ -560,7 +640,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-24 19:30:02" itemprop="dateModified" datetime="2022-07-24T19:30:02+08:00">2022-07-24</time>
+                <time title="修改时间：2022-09-06 15:58:31" itemprop="dateModified" datetime="2022-09-06T15:58:31+08:00">2022-09-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -589,27 +669,6 @@
 <ol>
 <li>存在 $\xi\in(a,b)$，$f’(\xi)+f(\xi)=0$</li>
 <li>存在 $\eta\in(a,b)$，$f’(\eta)-f(\eta)=0$</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li>2022.5.9<ol>
-<li>设 $f(x)$ 在 $[0,a]$ 上连续，在 $(0,a)$ 内可导，且 $f(a)=0$，证明: 存在一点 $\xi∈(0,a)$，使得 $f(\xi)+\xi f’(\xi)=0$.</li>
-<li>设 $f(x)$ 在 $[0,a]$ 上连续，在 $(0,a)$ 内可导，且 $f(a)=0$，证明: 存在一点 $\xi∈(0,a)$，使得 $nf(\xi)+\xi f’(\xi)=0$.</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><p>2022.5.10</p>
-<p>已知函数 $f(x)$ 具有二阶导数，且 $\lim\limits_{x\rightarrow0} \frac{f(x)}{x}=0 $，$f(1)=0$  试证：在区间 $(0,1)$ 内至少<br>存在一点$\xi$，使得$f’’(\xi)$=0.</p>
-</li>
-</ul>
-<ul>
-<li><p>2022.5.11</p>
-<p>已知函数 $f(x)$ 在 $[0,1]$ 连续，$(0,1)$ 可微，$f(0)=f(1)=0$，$f(\frac{1}{2})=1$</p>
-<ol>
-<li>证明：存在 $\xi \in (\frac{1}{2},1)$，$f(\xi) = \xi$</li>
-<li>存在 $\eta\in(0,\xi)$，$f’(\eta)=f(\eta)-\eta+1$</li>
 </ol>
 </li>
 </ul>
@@ -973,94 +1032,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linear_regression/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="wenyi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="文溢の博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linear_regression/" class="post-title-link" itemprop="url">线性回归实战</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-01-10 23:30:41" itemprop="dateCreated datePublished" datetime="2022-01-10T23:30:41+08:00">2022-01-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-23 18:04:47" itemprop="dateModified" datetime="2022-07-23T18:04:47+08:00">2022-07-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h1><ul>
-<li>COVID-19 daily cases prediction</li>
-<li>Training data: 2700 samples</li>
-<li>Testing data: 893 samples</li>
-<li>Evaluation metric: Root Mean Squared Error (RMSE)</li>
-</ul>
-<p>使用数据集[<a target="_blank" rel="noopener" href="https://www.kaggle.com/c/ml2021spring-hw1/data">https://www.kaggle.com/c/ml2021spring-hw1/data</a>]</p>
-<h2 id="使用线性模型评估感染率"><a href="#使用线性模型评估感染率" class="headerlink" title="使用线性模型评估感染率"></a>使用线性模型评估感染率</h2><h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linear_regression/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1132,14 +1103,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -1172,7 +1143,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2022-09-06T07:51:13.573Z</updated>
+  <updated>2023-03-29T08:52:20.515Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -17,20 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>vim使用</title>
+    <title>第 338 场周赛</title>
+    <link href="http://wenyisir.github.io/2023/03/29/Leetcode%E5%91%A8%E8%B5%9B/%E7%AC%AC%20338%20%E5%9C%BA%E5%91%A8%E8%B5%9B/"/>
+    <id>http://wenyisir.github.io/2023/03/29/Leetcode%E5%91%A8%E8%B5%9B/%E7%AC%AC%20338%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</id>
+    <published>2023-03-29T08:31:08.000Z</published>
+    <updated>2023-03-29T08:52:20.515Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;第-338-场周赛-题解&quot;&gt;&lt;a href=&quot;#第-338-场周赛-题解&quot; class=&quot;headerlink&quot; title=&quot;第 338 场周赛 题解&quot;&gt;&lt;/a&gt;第 338 场周赛 题解&lt;/h2&gt;&lt;h3 id=&quot;K-件物品的最大和&quot;&gt;&lt;a href=&quot;#K-件物品的最大和&quot; class=&quot;headerlink&quot; title=&quot;K 件物品的最大和&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.cn/problems/k-items-with-the-maximum-sum/&quot;&gt;K 件物品的最大和&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;贪心，直接按照1，0，-1选即可&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;kItemsWithMaximumSum&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; numOnes, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; numZeros, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; numNegOnes, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; k)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; res = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(k&amp;lt;=numOnes) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; k;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(numOnes+numZeros&amp;gt;=k) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; numOnes;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; numOnes - (k - numOnes - numZeros);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;质数减法运算&quot;&gt;&lt;a href=&quot;#质数减法运算&quot; class=&quot;headerlink&quot; title=&quot;质数减法运算&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.cn/problems/prime-subtraction-operation/&quot;&gt;质数减法运算&lt;/a&gt;&lt;/h3&gt;</summary>
+    
+    
+    
+    <category term="Leetcode周赛" scheme="http://wenyisir.github.io/categories/Leetcode%E5%91%A8%E8%B5%9B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vim使用</title>
     <link href="http://wenyisir.github.io/2022/09/06/Linux/vim/"/>
     <id>http://wenyisir.github.io/2022/09/06/Linux/vim/</id>
     <published>2022-09-06T07:37:50.000Z</published>
-    <updated>2022-09-06T07:51:13.573Z</updated>
+    <updated>2022-09-07T09:24:06.172Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;功能：&quot;&gt;&lt;a href=&quot;#功能：&quot; class=&quot;headerlink&quot; title=&quot;功能：&quot;&gt;&lt;/a&gt;功能：&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;命令行模式下的文本编辑器。&lt;/li&gt;
 &lt;li&gt;根据文件扩展名自动判别编程语言。支持代码缩进、代码高亮等功能。&lt;/li&gt;
 &lt;li&gt;使用方式：vim filename&lt;br&gt;如果已有该文件，则打开它。&lt;br&gt;如果没有该文件，则打开个一个新的文件，并命名为filename&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;模式：&quot;&gt;&lt;a href=&quot;#模式：&quot; class=&quot;headerlink&quot; title=&quot;模式：&quot;&gt;&lt;/a&gt;模式：&lt;/h2&gt;&lt;p&gt;vim编辑器有三种模式：&lt;strong&gt;命令模式、编辑模式、命令行模式&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;模式间切换方法：&lt;br&gt;（1）命令模式下，输入&lt;code&gt;：&lt;/code&gt;后，进入末行模式&lt;br&gt;（2）命令模式下，按下&lt;code&gt;i&lt;/code&gt;、&lt;code&gt;a&lt;/code&gt;等键，可以计入编辑模式&lt;br&gt;（3）编辑模式下，按下&lt;code&gt;esc&lt;/code&gt;，可以回到命令模式&lt;/p&gt;</summary>
+&lt;/ul&gt;</summary>
     
     
     
@@ -63,11 +80,11 @@
   </entry>
   
   <entry>
-    <title>tmux使用</title>
+    <title>Tmux使用</title>
     <link href="http://wenyisir.github.io/2022/09/02/Linux/tmux/"/>
     <id>http://wenyisir.github.io/2022/09/02/Linux/tmux/</id>
     <published>2022-09-02T09:05:04.000Z</published>
-    <updated>2022-09-06T07:36:53.887Z</updated>
+    <updated>2022-09-06T07:57:57.607Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;tmux&lt;/strong&gt; 是指通过一个终端登录远程主机并运行后，在其中可以开启多个控制台的终端复用软件。&lt;/p&gt;
@@ -98,8 +115,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;
-&lt;h2 id=&quot;操作&quot;&gt;&lt;a href=&quot;#操作&quot; class=&quot;headerlink&quot; title=&quot;操作&quot;&gt;&lt;/a&gt;操作&lt;/h2&gt;</summary>
+&lt;/div&gt;</summary>
     
     
     
@@ -139,7 +155,7 @@
     <link href="http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%BA%94%E6%9C%88/"/>
     <id>http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%BA%94%E6%9C%88/</id>
     <published>2022-05-08T13:27:41.000Z</published>
-    <updated>2022-07-24T11:30:02.754Z</updated>
+    <updated>2022-09-06T07:58:31.965Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;中值定理部分&quot;&gt;&lt;a href=&quot;#中值定理部分&quot; class=&quot;headerlink&quot; title=&quot;中值定理部分&quot;&gt;&lt;/a&gt;中值定理部分&lt;/h1&gt;&lt;ul&gt;
@@ -148,27 +164,6 @@
 &lt;ol&gt;
 &lt;li&gt;存在 $\xi\in(a,b)$，$f’(\xi)+f(\xi)=0$&lt;/li&gt;
 &lt;li&gt;存在 $\eta\in(a,b)$，$f’(\eta)-f(\eta)=0$&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;2022.5.9&lt;ol&gt;
-&lt;li&gt;设 $f(x)$ 在 $[0,a]$ 上连续，在 $(0,a)$ 内可导，且 $f(a)=0$，证明: 存在一点 $\xi∈(0,a)$，使得 $f(\xi)+\xi f’(\xi)=0$.&lt;/li&gt;
-&lt;li&gt;设 $f(x)$ 在 $[0,a]$ 上连续，在 $(0,a)$ 内可导，且 $f(a)=0$，证明: 存在一点 $\xi∈(0,a)$，使得 $nf(\xi)+\xi f’(\xi)=0$.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;2022.5.10&lt;/p&gt;
-&lt;p&gt;已知函数 $f(x)$ 具有二阶导数，且 $\lim\limits_{x\rightarrow0} \frac{f(x)}{x}=0 $，$f(1)=0$  试证：在区间 $(0,1)$ 内至少&lt;br&gt;存在一点$\xi$，使得$f’’(\xi)$=0.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;2022.5.11&lt;/p&gt;
-&lt;p&gt;已知函数 $f(x)$ 在 $[0,1]$ 连续，$(0,1)$ 可微，$f(0)=f(1)=0$，$f(\frac{1}{2})=1$&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;证明：存在 $\xi \in (\frac{1}{2},1)$，$f(\xi) = \xi$&lt;/li&gt;
-&lt;li&gt;存在 $\eta\in(0,\xi)$，$f’(\eta)=f(\eta)-\eta+1$&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</summary>
@@ -380,7 +375,7 @@
     <link href="http://wenyisir.github.io/2022/01/08/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     <id>http://wenyisir.github.io/2022/01/08/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</id>
     <published>2022-01-08T12:48:58.000Z</published>
-    <updated>2022-03-11T06:52:44.324Z</updated>
+    <updated>2023-03-03T12:33:56.232Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;数据结构&quot;&gt;&lt;a href=&quot;#数据结构&quot; class=&quot;headerlink&quot; title=&quot;数据结构&quot;&gt;&lt;/a&gt;&lt;div align=&quot;center&quot;&gt;数据结构&lt;/div&gt;&lt;/h1&gt;&lt;h2 id=&quot;ST-Sparse-table-表&quot;&gt;&lt;a href=&quot;#ST-Sparse-table-表&quot; class=&quot;headerlink&quot; title=&quot;ST(Sparse table)表&quot;&gt;&lt;/a&gt;ST(Sparse table)表&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;一维：&lt;/strong&gt;&lt;/p&gt;

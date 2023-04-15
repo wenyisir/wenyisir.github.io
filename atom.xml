@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2023-03-29T08:52:20.515Z</updated>
+  <updated>2023-04-15T13:14:36.681Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>lower_bound中的comp使用方法</title>
+    <link href="http://wenyisir.github.io/2023/04/15/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/lower_bound/"/>
+    <id>http://wenyisir.github.io/2023/04/15/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/lower_bound/</id>
+    <published>2023-04-15T13:11:23.000Z</published>
+    <updated>2023-04-15T13:14:36.681Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;lower-bound中的comp使用方法&quot;&gt;&lt;a href=&quot;#lower-bound中的comp使用方法&quot; class=&quot;headerlink&quot; title=&quot;lower_bound中的comp使用方法&quot;&gt;&lt;/a&gt;lower_bound中的comp使用方法&lt;/h2&gt;&lt;h3 id=&quot;定义：&quot;&gt;&lt;a href=&quot;#定义：&quot; class=&quot;headerlink&quot; title=&quot;定义：&quot;&gt;&lt;/a&gt;定义：&lt;/h3&gt;&lt;p&gt;定义有两种，一种有comp函数，一种没有comp函数。&lt;/p&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt;&amp;lt; class ForwardIt, class T &amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;constexpr&lt;/span&gt; ForwardIt &lt;span class=&quot;title&quot;&gt;lower_bound&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;( ForwardIt first, ForwardIt last,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;params&quot;&gt;&lt;span class=&quot;function&quot;&gt;                                 &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; T&amp;amp; value )&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt;&amp;lt; class ForwardIt, class T, class Compare &amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;constexpr&lt;/span&gt; ForwardIt &lt;span class=&quot;title&quot;&gt;lower_bound&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;( ForwardIt first, ForwardIt last,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;params&quot;&gt;&lt;span class=&quot;function&quot;&gt;                                 &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; T&amp;amp; value, Compare comp )&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;参数：&quot;&gt;&lt;a href=&quot;#参数：&quot; class=&quot;headerlink&quot; title=&quot;参数：&quot;&gt;&lt;/a&gt;参数：&lt;/h3&gt;</summary>
+    
+    
+    
+    <category term="算法笔记" scheme="http://wenyisir.github.io/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>第 340 场周赛</title>
+    <link href="http://wenyisir.github.io/2023/04/09/Leetcode%E5%91%A8%E8%B5%9B/%E7%AC%AC%20340%20%E5%9C%BA%E5%91%A8%E8%B5%9B/"/>
+    <id>http://wenyisir.github.io/2023/04/09/Leetcode%E5%91%A8%E8%B5%9B/%E7%AC%AC%20340%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</id>
+    <published>2023-04-09T13:41:13.000Z</published>
+    <updated>2023-04-15T13:16:31.061Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;第-340-场周赛-题解&quot;&gt;&lt;a href=&quot;#第-340-场周赛-题解&quot; class=&quot;headerlink&quot; title=&quot;第 340 场周赛 题解&quot;&gt;&lt;/a&gt;第 340 场周赛 题解&lt;/h2&gt;&lt;h4 id=&quot;6361-对角线上的质数&quot;&gt;&lt;a href=&quot;#6361-对角线上的质数&quot; class=&quot;headerlink&quot; title=&quot;6361. 对角线上的质数&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.cn/problems/prime-in-diagonal/&quot;&gt;6361. 对角线上的质数&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;暴力即可。&lt;/p&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;diagonalPrime&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(vector&amp;lt;vector&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;&amp;gt;&amp;amp; nums)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        function&amp;lt;&lt;span class=&quot;built_in&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;)&amp;gt; isp = [&amp;amp;](&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x == &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i=&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;span class=&quot;number&quot;&gt;1ll&lt;/span&gt;*i*i&amp;lt;=&lt;span class=&quot;number&quot;&gt;1ll&lt;/span&gt;*x;++i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x%i == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; len = nums.&lt;span class=&quot;built_in&quot;&gt;size&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; res = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;i&amp;lt;len;++i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;isp&lt;/span&gt;(nums[i][i])) res=&lt;span class=&quot;built_in&quot;&gt;max&lt;/span&gt;(res, nums[i][i]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;isp&lt;/span&gt;(nums[i][len-i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;]))res=&lt;span class=&quot;built_in&quot;&gt;max&lt;/span&gt;(res, nums[i][len-i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; res;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;6360-等值距离和&quot;&gt;&lt;a href=&quot;#6360-等值距离和&quot; class=&quot;headerlink&quot; title=&quot;6360. 等值距离和&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.cn/problems/sum-of-distances/&quot;&gt;6360. 等值距离和&lt;/a&gt;&lt;/h4&gt;</summary>
+    
+    
+    
+    <category term="Leetcode周赛" scheme="http://wenyisir.github.io/categories/Leetcode%E5%91%A8%E8%B5%9B/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>第 338 场周赛</title>
@@ -48,29 +86,6 @@
 &lt;li&gt;根据文件扩展名自动判别编程语言。支持代码缩进、代码高亮等功能。&lt;/li&gt;
 &lt;li&gt;使用方式：vim filename&lt;br&gt;如果已有该文件，则打开它。&lt;br&gt;如果没有该文件，则打开个一个新的文件，并命名为filename&lt;/li&gt;
 &lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="Linux笔记" scheme="http://wenyisir.github.io/categories/Linux%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Linux常用命令</title>
-    <link href="http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
-    <published>2022-09-02T09:05:04.000Z</published>
-    <updated>2022-09-06T07:24:07.445Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Linux基本命令&quot;&gt;&lt;a href=&quot;#Linux基本命令&quot; class=&quot;headerlink&quot; title=&quot;Linux基本命令&quot;&gt;&lt;/a&gt;Linux基本命令&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
-        
-      
     
     
     
@@ -116,6 +131,29 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;</summary>
+    
+    
+    
+    <category term="Linux笔记" scheme="http://wenyisir.github.io/categories/Linux%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-09-02T09:05:04.000Z</published>
+    <updated>2022-09-06T07:24:07.445Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Linux基本命令&quot;&gt;&lt;a href=&quot;#Linux基本命令&quot; class=&quot;headerlink&quot; title=&quot;Linux基本命令&quot;&gt;&lt;/a&gt;Linux基本命令&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
     
     
     
@@ -314,7 +352,7 @@
     <link href="http://wenyisir.github.io/2022/01/09/Linux/Git/"/>
     <id>http://wenyisir.github.io/2022/01/09/Linux/Git/</id>
     <published>2022-01-09T09:05:04.000Z</published>
-    <updated>2022-07-23T10:18:44.159Z</updated>
+    <updated>2023-03-30T12:18:00.610Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;1-Git-结构&quot;&gt;&lt;a href=&quot;#1-Git-结构&quot; class=&quot;headerlink&quot; title=&quot;1. Git 结构&quot;&gt;&lt;/a&gt;1. Git 结构&lt;/h3&gt;&lt;ul&gt;
@@ -324,7 +362,7 @@
 &lt;/ul&gt;
 &lt;p&gt;工作区 -&amp;gt; git add -&amp;gt; 暂存区 -&amp;gt; 本地库&lt;/p&gt;
 &lt;h3 id=&quot;2-Git-命令行操作&quot;&gt;&lt;a href=&quot;#2-Git-命令行操作&quot; class=&quot;headerlink&quot; title=&quot;2. Git 命令行操作&quot;&gt;&lt;/a&gt;2. Git 命令行操作&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;初始本地化库&lt;br&gt;命令：git add&lt;br&gt;效果：生成 .git 文件。其中存放本地库相关的子目录和文件&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;初始本地化库&lt;br&gt;命令：git init&lt;br&gt;效果：生成 .git 文件。其中存放本地库相关的子目录和文件&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;设置签名&lt;/p&gt;
 &lt;p&gt;形式：用户名与Email地址&lt;br&gt;作用：区分不同的开发人员的身份&lt;br&gt;命令：&lt;/p&gt;
@@ -347,7 +385,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;提交&lt;br&gt;git commit -m “commmit message” [file name]&lt;br&gt;将暂存区的内容提交到本地库&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;查看历史记录&lt;br&gt;git log :多屏显示控制方式(linux下：空格翻页，b向上翻页，q退出)&lt;br&gt;git log —pretty=oneline&lt;br&gt;git log —oneline&lt;br&gt;git reflog: 长用&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;查看历史记录&lt;br&gt;git log :多屏显示控制方式(linux下：空格翻页，b向上翻页，q退出)&lt;br&gt;git log —pretty=oneline&lt;br&gt;git log —oneline&lt;br&gt;git reflog: 常用&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;前进后退&lt;br&gt;基于索引值的操作[推荐]&lt;/p&gt;
 &lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git reset --hard [局部索引值]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;

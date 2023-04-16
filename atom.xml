@@ -18,8 +18,8 @@
   
   <entry>
     <title>lower_bound中的comp使用方法</title>
-    <link href="http://wenyisir.github.io/2023/04/15/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/lower_bound/"/>
-    <id>http://wenyisir.github.io/2023/04/15/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/lower_bound/</id>
+    <link href="http://wenyisir.github.io/2023/04/15/c++%E4%B8%8E%E7%AE%97%E6%B3%95/lower_bound/"/>
+    <id>http://wenyisir.github.io/2023/04/15/c++%E4%B8%8E%E7%AE%97%E6%B3%95/lower_bound/</id>
     <published>2023-04-15T13:11:23.000Z</published>
     <updated>2023-04-15T13:14:36.681Z</updated>
     
@@ -40,7 +40,7 @@
     <link href="http://wenyisir.github.io/2023/04/09/Leetcode%E5%91%A8%E8%B5%9B/%E7%AC%AC%20340%20%E5%9C%BA%E5%91%A8%E8%B5%9B/"/>
     <id>http://wenyisir.github.io/2023/04/09/Leetcode%E5%91%A8%E8%B5%9B/%E7%AC%AC%20340%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</id>
     <published>2023-04-09T13:41:13.000Z</published>
-    <updated>2023-04-15T13:16:31.061Z</updated>
+    <updated>2023-04-16T07:54:33.737Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;第-340-场周赛-题解&quot;&gt;&lt;a href=&quot;#第-340-场周赛-题解&quot; class=&quot;headerlink&quot; title=&quot;第 340 场周赛 题解&quot;&gt;&lt;/a&gt;第 340 场周赛 题解&lt;/h2&gt;&lt;h4 id=&quot;6361-对角线上的质数&quot;&gt;&lt;a href=&quot;#6361-对角线上的质数&quot; class=&quot;headerlink&quot; title=&quot;6361. 对角线上的质数&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.cn/problems/prime-in-diagonal/&quot;&gt;6361. 对角线上的质数&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;暴力即可。&lt;/p&gt;
@@ -163,57 +163,6 @@
   </entry>
   
   <entry>
-    <title>七月部分</title>
-    <link href="http://wenyisir.github.io/2022/07/22/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%B8%83%E6%9C%88/"/>
-    <id>http://wenyisir.github.io/2022/07/22/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%B8%83%E6%9C%88/</id>
-    <published>2022-07-22T12:15:13.000Z</published>
-    <updated>2022-07-25T07:32:56.594Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;积分&quot;&gt;&lt;a href=&quot;#积分&quot; class=&quot;headerlink&quot; title=&quot;积分&quot;&gt;&lt;/a&gt;积分&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;2022.07.23&lt;/p&gt;
-&lt;p&gt;求下列不定积分:&lt;/p&gt;
-&lt;script type=&quot;math/tex;</summary>
-        
-      
-    
-    
-    
-    <category term="每日一题" scheme="http://wenyisir.github.io/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>五月部分</title>
-    <link href="http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%BA%94%E6%9C%88/"/>
-    <id>http://wenyisir.github.io/2022/05/08/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E4%BA%94%E6%9C%88/</id>
-    <published>2022-05-08T13:27:41.000Z</published>
-    <updated>2022-09-06T07:58:31.965Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;中值定理部分&quot;&gt;&lt;a href=&quot;#中值定理部分&quot; class=&quot;headerlink&quot; title=&quot;中值定理部分&quot;&gt;&lt;/a&gt;中值定理部分&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;2022.5.8&lt;/p&gt;
-&lt;p&gt;设 $f(x)$ 在 $[a,b]$ 连续，在 $(a,b)$ 可导，且 $f(a)=f(b)=0$ ，证明：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;存在 $\xi\in(a,b)$，$f’(\xi)+f(\xi)=0$&lt;/li&gt;
-&lt;li&gt;存在 $\eta\in(a,b)$，$f’(\eta)-f(\eta)=0$&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="每日一题" scheme="http://wenyisir.github.io/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>输入输出接口</title>
     <link href="http://wenyisir.github.io/2022/04/26/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8E%A5%E5%8F%A3/"/>
     <id>http://wenyisir.github.io/2022/04/26/%E5%BE%AE%E6%9C%BA%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%8E%A5%E5%8F%A3/</id>
@@ -285,8 +234,8 @@
   
   <entry>
     <title>支持向量机</title>
-    <link href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/"/>
-    <id>http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SVM/</id>
+    <link href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/SVM/"/>
+    <id>http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/SVM/</id>
     <published>2022-01-10T15:30:41.000Z</published>
     <updated>2022-07-23T10:09:16.632Z</updated>
     
@@ -303,8 +252,8 @@
   
   <entry>
     <title>线性回归实战</title>
-    <link href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linear_regression/"/>
-    <id>http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/linear_regression/</id>
+    <link href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/linear_regression/"/>
+    <id>http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/linear_regression/</id>
     <published>2022-01-10T15:30:41.000Z</published>
     <updated>2022-07-23T10:04:47.772Z</updated>
     
@@ -327,8 +276,8 @@
   
   <entry>
     <title>Pytorch 基本操作</title>
-    <link href="http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/"/>
-    <id>http://wenyisir.github.io/2022/01/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/</id>
+    <link href="http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/"/>
+    <id>http://wenyisir.github.io/2022/01/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C/</id>
     <published>2022-01-10T15:30:41.000Z</published>
     <updated>2022-05-08T17:14:44.623Z</updated>
     
@@ -410,8 +359,8 @@
   
   <entry>
     <title>数据结构</title>
-    <link href="http://wenyisir.github.io/2022/01/08/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    <id>http://wenyisir.github.io/2022/01/08/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</id>
+    <link href="http://wenyisir.github.io/2022/01/08/c++%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <id>http://wenyisir.github.io/2022/01/08/c++%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</id>
     <published>2022-01-08T12:48:58.000Z</published>
     <updated>2023-03-03T12:33:56.232Z</updated>
     

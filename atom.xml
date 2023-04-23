@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2023-04-15T13:14:36.681Z</updated>
+  <updated>2023-04-23T15:01:33.325Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://wenyisir.github.io/2023/04/19/Linux/shell/"/>
+    <id>http://wenyisir.github.io/2023/04/19/Linux/shell/</id>
+    <published>2023-04-19T07:42:32.201Z</published>
+    <updated>2023-04-23T15:01:33.325Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Shell-编程&quot;&gt;&lt;a href=&quot;#Shell-编程&quot; class=&quot;headerlink&quot; title=&quot;Shell 编程&quot;&gt;&lt;/a&gt;Shell 编程&lt;/h1&gt;&lt;h2 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;变量&lt;/h2&gt;&lt;h3 id=&quot;变量定义&quot;&gt;&lt;a href=&quot;#变量定义&quot; class=&quot;headerlink&quot; title=&quot;变量定义&quot;&gt;&lt;/a&gt;变量定义&lt;/h3&gt;&lt;p&gt;Shell 支持以下三种定义变量的方式：&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;variable=value&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;variable=&amp;#x27;value&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;variable=&amp;quot;value&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>lower_bound中的comp使用方法</title>
@@ -78,7 +94,7 @@
     <link href="http://wenyisir.github.io/2022/09/06/Linux/vim/"/>
     <id>http://wenyisir.github.io/2022/09/06/Linux/vim/</id>
     <published>2022-09-06T07:37:50.000Z</published>
-    <updated>2022-09-07T09:24:06.172Z</updated>
+    <updated>2023-04-23T13:35:18.810Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;功能：&quot;&gt;&lt;a href=&quot;#功能：&quot; class=&quot;headerlink&quot; title=&quot;功能：&quot;&gt;&lt;/a&gt;功能：&lt;/h2&gt;&lt;ul&gt;
@@ -86,6 +102,24 @@
 &lt;li&gt;根据文件扩展名自动判别编程语言。支持代码缩进、代码高亮等功能。&lt;/li&gt;
 &lt;li&gt;使用方式：vim filename&lt;br&gt;如果已有该文件，则打开它。&lt;br&gt;如果没有该文件，则打开个一个新的文件，并命名为filename&lt;/li&gt;
 &lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Linux笔记" scheme="http://wenyisir.github.io/categories/Linux%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-09-02T09:05:04.000Z</published>
+    <updated>2023-04-23T14:20:59.409Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Linux基本命令&quot;&gt;&lt;a href=&quot;#Linux基本命令&quot; class=&quot;headerlink&quot; title=&quot;Linux基本命令&quot;&gt;&lt;/a&gt;Linux基本命令&lt;/h2&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;(1) ctrl c: 取消命令，并且换行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(2) ctrl u: 清空本行命令&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(3) tab键：可以补全命令和文件名，如果补全不了快速按两下tab键，可以显示备选选项&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(4) ls: 列出当前目录下所有文件，蓝色的是文件夹，白色的是普通文件，绿色的是可执行文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(5) pwd: 显示当前路径&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(6) cd XXX: 进入XXX目录下, cd .. 返回上层目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(7) cp XXX YYY: 将XXX文件复制成YYY，XXX和YYY可以是一个路径，比如../dir_c/a.txt，表示上层目录下的dir_c文件夹下的文件a.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(8) mkdir XXX: 创建目录XXX&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(9) rm XXX: 删除普通文件;  rm XXX -r: 删除文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(10) mv XXX YYY: 将XXX文件移动到YYY，和cp命令一样，XXX和YYY可以是一个路径；重命名也是用这个命令&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(11) touch XXX: 创建一个文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(12) cat XXX: 展示文件XXX中的内容&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(13) 复制文本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    windows/Linux下：Ctrl + insert，Mac下：command + c&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(14) 粘贴文本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    windows/Linux下：Shift + insert，Mac下：command + v&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Linux权限管理&quot;&gt;&lt;a href=&quot;#Linux权限管理&quot; class=&quot;headerlink&quot; title=&quot;Linux权限管理&quot;&gt;&lt;/a&gt;Linux权限管理&lt;/h2&gt;&lt;h3 id=&quot;chmod命令修改文件权限&quot;&gt;&lt;a href=&quot;#chmod命令修改文件权限&quot; class=&quot;headerlink&quot; title=&quot;chmod命令修改文件权限&quot;&gt;&lt;/a&gt;chmod命令修改文件权限&lt;/h3&gt;&lt;p&gt;Linux 中，文件的基本权限由 9 个字符组成，例如，以 rwxrw-r-x 为例，其中rwx分别是可读、可写、可执行(execute)，我们可以使用数字来代表各个权限，各个权限与数字的对应关系如下：&lt;/p&gt;</summary>
     
     
     
@@ -131,29 +165,6 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;</summary>
-    
-    
-    
-    <category term="Linux笔记" scheme="http://wenyisir.github.io/categories/Linux%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Linux常用命令</title>
-    <link href="http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://wenyisir.github.io/2022/09/02/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
-    <published>2022-09-02T09:05:04.000Z</published>
-    <updated>2022-09-06T07:24:07.445Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Linux基本命令&quot;&gt;&lt;a href=&quot;#Linux基本命令&quot; class=&quot;headerlink&quot; title=&quot;Linux基本命令&quot;&gt;&lt;/a&gt;Linux基本命令&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
-        
-      
     
     
     

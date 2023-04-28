@@ -6,7 +6,7 @@
   <link href="http://wenyisir.github.io/atom.xml" rel="self"/>
   
   <link href="http://wenyisir.github.io/"/>
-  <updated>2023-04-23T15:01:33.325Z</updated>
+  <updated>2023-04-15T13:14:36.681Z</updated>
   <id>http://wenyisir.github.io/</id>
   
   <author>
@@ -15,22 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://wenyisir.github.io/2023/04/19/Linux/shell/"/>
-    <id>http://wenyisir.github.io/2023/04/19/Linux/shell/</id>
-    <published>2023-04-19T07:42:32.201Z</published>
-    <updated>2023-04-23T15:01:33.325Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;Shell-编程&quot;&gt;&lt;a href=&quot;#Shell-编程&quot; class=&quot;headerlink&quot; title=&quot;Shell 编程&quot;&gt;&lt;/a&gt;Shell 编程&lt;/h1&gt;&lt;h2 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;变量&lt;/h2&gt;&lt;h3 id=&quot;变量定义&quot;&gt;&lt;a href=&quot;#变量定义&quot; class=&quot;headerlink&quot; title=&quot;变量定义&quot;&gt;&lt;/a&gt;变量定义&lt;/h3&gt;&lt;p&gt;Shell 支持以下三种定义变量的方式：&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;variable=value&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;variable=&amp;#x27;value&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;variable=&amp;quot;value&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>lower_bound中的comp使用方法</title>
@@ -85,6 +69,24 @@
     
     
     <category term="Leetcode周赛" scheme="http://wenyisir.github.io/categories/Leetcode%E5%91%A8%E8%B5%9B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Shell 编程</title>
+    <link href="http://wenyisir.github.io/2022/12/03/Linux/shell/"/>
+    <id>http://wenyisir.github.io/2022/12/03/Linux/shell/</id>
+    <published>2022-12-03T09:22:12.000Z</published>
+    <updated>2023-04-28T09:22:09.998Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Shell-编程&quot;&gt;&lt;a href=&quot;#Shell-编程&quot; class=&quot;headerlink&quot; title=&quot;Shell 编程&quot;&gt;&lt;/a&gt;Shell 编程&lt;/h1&gt;&lt;h2 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;变量&lt;/h2&gt;&lt;h3 id=&quot;变量定义&quot;&gt;&lt;a href=&quot;#变量定义&quot; class=&quot;headerlink&quot; title=&quot;变量定义&quot;&gt;&lt;/a&gt;变量定义&lt;/h3&gt;&lt;p&gt;Shell 支持以下三种定义变量的方式：&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;variable=value&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;variable=&amp;#x27;value&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;variable=&amp;quot;value&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Linux笔记" scheme="http://wenyisir.github.io/categories/Linux%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>
